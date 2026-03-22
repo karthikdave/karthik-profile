@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin:0;
@@ -23,28 +21,40 @@
       top:0;
       width:100%;
       background:white;
-      padding:15px 30px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+      padding:18px 40px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.05);
       display:flex;
       justify-content:space-between;
+      align-items:center;
       z-index:1000;
     }
 
     .nav a {
       text-decoration:none;
       color:#111;
-      margin-left:20px;
+      margin-left:25px;
       font-weight:500;
     }
 
+    .nav a:hover {
+      color:#6366f1;
+    }
+
     section {
-      padding:100px 20px;
+      padding:110px 20px;
       max-width:1100px;
       margin:auto;
     }
 
-    h1 { font-size:48px; }
-    h2 { font-size:32px; }
+    h1 {
+      font-size:50px;
+      margin-bottom:10px;
+    }
+
+    h2 {
+      font-size:34px;
+      margin-bottom:20px;
+    }
 
     p {
       color:#4b5563;
@@ -52,18 +62,20 @@
       line-height:1.7;
     }
 
+    /* HERO */
     .hero {
       text-align:center;
-      padding-top:140px;
+      padding-top:160px;
+      background:linear-gradient(to bottom, #eef2ff, #f9fafb);
     }
 
     .profile {
-      width:140px;
-      height:140px;
+      width:150px;
+      height:150px;
       border-radius:50%;
       object-fit:cover;
       margin-bottom:20px;
-      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+      box-shadow:0 15px 30px rgba(0,0,0,0.1);
     }
 
     .btn {
@@ -77,22 +89,34 @@
       font-weight:bold;
     }
 
+    /* GRID */
     .grid {
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
       gap:20px;
     }
 
+    /* PREMIUM CARDS */
     .card {
       background:white;
       padding:25px;
       border-radius:14px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.05);
+      border-left:5px solid #6366f1;
+      box-shadow:0 10px 25px rgba(0,0,0,0.05);
       transition:0.3s;
     }
 
     .card:hover {
-      transform:translateY(-5px);
+      transform:translateY(-6px);
+    }
+
+    .card-title {
+      font-weight:bold;
+      margin-bottom:8px;
+    }
+
+    .section-alt {
+      background:#f3f4f6;
     }
 
     .center {
@@ -143,13 +167,13 @@
 
 <!-- SKILLS -->
 
-<section>
+<section class="section-alt">
   <h2>Core Expertise</h2>
   <div class="grid">
-    <div class="card">Agile & Scrum Leadership</div>
-    <div class="card">Business Analysis</div>
-    <div class="card">Stakeholder Management</div>
-    <div class="card">JIRA & Azure DevOps</div>
+    <div class="card"><div class="card-title">Agile Leadership</div>Driving high-performing Scrum teams</div>
+    <div class="card"><div class="card-title">Business Analysis</div>Translating needs into solutions</div>
+    <div class="card"><div class="card-title">Stakeholder Management</div>Aligning business & tech</div>
+    <div class="card"><div class="card-title">Tools</div>JIRA & Azure DevOps</div>
   </div>
 </section>
 
@@ -158,21 +182,30 @@
 <section id="work">
   <h2>Impact Highlights</h2>
   <div class="grid">
-    <div class="card">Led Agile delivery for enterprise SCM initiatives</div>
-    <div class="card">Improved sprint predictability and team velocity</div>
-    <div class="card">Bridged business & technology teams effectively</div>
-    <div class="card">Delivered scalable BFSI solutions</div>
+    <div class="card"><div class="card-title">SCM Programs</div>Led enterprise-scale Agile delivery</div>
+    <div class="card"><div class="card-title">Performance</div>Improved team velocity & predictability</div>
+    <div class="card"><div class="card-title">Bridging Roles</div>Connected business & technology</div>
+    <div class="card"><div class="card-title">BFSI</div>Delivered scalable solutions</div>
   </div>
 </section>
 
-<!-- SCWK DOSE -->
+<!-- SCWK -->
 
-<section id="scwk">
+<section id="scwk" class="section-alt">
   <h2>SCWK Dose</h2>
   <div class="grid">
-    <div class="card">Why Agile Fails in Real Teams</div>
-    <div class="card">Scrum Master ≠ Meeting Organizer</div>
-    <div class="card">Velocity is NOT Productivity</div>
+    <div class="card">
+      <div class="card-title">Why Agile Fails</div>
+      Teams follow rituals but miss mindset.
+    </div>
+    <div class="card">
+      <div class="card-title">Scrum Master Myth</div>
+      It’s leadership, not meeting management.
+    </div>
+    <div class="card">
+      <div class="card-title">Velocity Trap</div>
+      Speed ≠ Value delivered.
+    </div>
   </div>
 </section>
 
@@ -180,7 +213,7 @@
 
 <section id="contact" class="center">
   <h2>Let’s Connect</h2>
-  <a class="btn" href="https://www.linkedin.com/in/karthik-dave-csm" target="_blank">LinkedIn</a>
+  <a class="btn" href="https://www.linkedin.com/in/karthik-dave-csm" target="_blank">Connect on LinkedIn</a>
 </section>
 
 </body>
