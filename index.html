@@ -12,17 +12,21 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
+  padding-top: 80px; /* prevents overlap */
   font-family: "Segoe UI", Arial, sans-serif;
   background: #f8fafc;
   color: #1f2937;
 }
 
-/* NAV */
+/* HEADER - FIXED ALWAYS */
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
 nav {
@@ -31,13 +35,37 @@ nav {
   padding: 14px 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 18px;
+  margin: 0;
 }
+
+nav a {
+  text-decoration: none;
+  color: #374151;
+  position: relative;
+}
+
+nav a:hover { color: #2563eb; }
+
+/* underline animation */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #2563eb;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+nav a:hover::after { width: 100%; }
 
 /* HERO */
 .hero {
@@ -61,7 +89,7 @@ nav ul {
   object-position: center 20%;
 }
 
-h1 { font-size: 2.4rem; }
+h1 { font-size: 2.4rem; margin: 10px 0; }
 
 .hero-role { color: #2563eb; font-weight: 600; }
 
@@ -74,14 +102,14 @@ h1 { font-size: 2.4rem; }
 
 .scwk-tag { color: #7c3aed; font-weight: 600; }
 
-/* SECTION */
+/* SECTIONS + ANIMATION */
 section {
   max-width: 1100px;
   margin: auto;
   padding: 80px 20px;
   opacity: 0;
   transform: translateY(40px);
-  transition: 0.8s;
+  transition: all 0.8s ease;
 }
 
 section.show {
@@ -107,9 +135,11 @@ section.show {
   border-radius: 12px;
   border-left: 4px solid #2563eb;
   box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
 }
 
-/* GRID */
+.card:hover { transform: translateY(-5px); }
+
 .grid {
   display: grid;
   gap: 20px;
@@ -129,9 +159,12 @@ section.show {
   padding: 16px;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
 }
 
-/* CONTACT */
+.post-card:hover { transform: translateY(-5px); }
+
+/* BUTTON */
 .btn {
   padding: 12px 22px;
   background: #2563eb;
@@ -140,6 +173,7 @@ section.show {
   text-decoration: none;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -159,6 +193,7 @@ footer {
 <li><a href="#experience">Experience</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#scwk">SCWK</a></li>
+<li><a href="#posts">Posts</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -189,49 +224,37 @@ footer {
 
 <div class="card">
 <h3>Accenture – Associate Manager (2025–Present)</h3>
-<ul>
-<li>Leading Agile delivery and stakeholder alignment</li>
-<li>Driving sprint governance and backlog prioritization</li>
-<li>Ensuring delivery tracking and risk visibility</li>
-</ul>
+<p>Agile delivery, stakeholder alignment, sprint governance.</p>
 </div>
 
 <div class="card">
-<h3>YASH Technologies – Business Analyst & Scrum Master (2022–2024)</h3>
-<ul>
-<li>Improved operational efficiency via data analytics</li>
-<li>Implemented Agile practices improving productivity</li>
-<li>Led UAT validation and stakeholder collaboration</li>
-</ul>
+<h3>YASH Technologies – BA & Scrum Master</h3>
+<p>Improved productivity via Agile & analytics.</p>
 </div>
 
 <div class="card">
-<h3>Mphasis – Senior Business Analyst (2016–2017)</h3>
-<ul>
-<li>Optimized supply chain processes</li>
-<li>Improved forecasting accuracy up to 95%</li>
-<li>Reduced procurement costs through analytics</li>
-</ul>
+<h3>Mphasis – Senior BA</h3>
+<p>95% forecasting accuracy improvement.</p>
 </div>
 
 <div class="card">
-<h3>BDO Consulting – Consultant (Qatar)</h3>
-<p>Business consulting and process analysis</p>
+<h3>BDO Consulting (Qatar)</h3>
+<p>Consulting & process analysis.</p>
 </div>
 
 <div class="card">
 <h3>Ford Technology Services</h3>
-<p>Software Analyst – Supply chain systems</p>
+<p>Supply chain systems.</p>
 </div>
 
 <div class="card">
-<h3>R Systems International</h3>
-<p>Systems Analyst – Enterprise solutions</p>
+<h3>R Systems</h3>
+<p>Enterprise solutions.</p>
 </div>
 
 <div class="card">
 <h3>Allsec Technologies</h3>
-<p>Client Support Executive – Early career</p>
+<p>Client support.</p>
 </div>
 
 </div>
@@ -240,15 +263,14 @@ footer {
 <!-- SKILLS -->
 
 <section id="skills">
-<h2 class="section-title">Skills & Expertise</h2>
+<h2 class="section-title">Skills</h2>
 
 <div class="grid">
 <div class="card">Agile, Scrum, Stakeholder Mgmt</div>
 <div class="card">Supply Chain, Logistics</div>
-<div class="card">Azure DevOps, JIRA, Confluence</div>
-<div class="card">Data Analytics & Forecasting</div>
+<div class="card">JIRA, ADO, Confluence</div>
+<div class="card">Data Analytics</div>
 </div>
-
 </section>
 
 <!-- SCWK -->
@@ -258,12 +280,25 @@ footer {
 <h2 class="section-title">SCWK</h2>
 
 <div class="grid">
-<div class="card">Simplifying Agile concepts</div>
-<div class="card">SCWK Lites | Bites | Dose</div>
-<div class="card">Real-world Agile insights</div>
+<div class="card">Agile Simplified</div>
+<div class="card">Lites | Bites | Dose</div>
+<div class="card">Real-world insights</div>
 </div>
 
 </div>
+</section>
+
+<!-- POSTS -->
+
+<section id="posts">
+<h2 class="section-title">SCWK Insights</h2>
+
+<div class="grid">
+<div class="post-card">⚡ Agile is not meetings</div>
+<div class="post-card">⚡ Velocity ≠ performance</div>
+<div class="post-card">⚡ Scrum Master = change agent</div>
+</div>
+
 </section>
 
 <!-- CONTACT -->
@@ -271,7 +306,7 @@ footer {
 <section id="contact">
 <h2 class="section-title">Let’s Connect</h2>
 
-<a class="btn" href="https://www.linkedin.com/in/karthik-dave-csm">
+<a class="btn" href="https://www.linkedin.com/in/karthik-dave-csm" target="_blank">
 Connect on LinkedIn
 </a>
 
