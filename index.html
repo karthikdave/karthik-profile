@@ -23,6 +23,7 @@ header {
   top: 0;
   background: #ffffff;
   box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  z-index: 1000;
 }
 
 nav {
@@ -39,7 +40,7 @@ nav ul {
   gap: 18px;
 }
 
-nav a { color: #374151; text-decoration: none; }
+nav a { text-decoration: none; color: #374151; }
 nav a:hover { color: #2563eb; }
 
 /* HERO */
@@ -100,26 +101,24 @@ h1 { font-size: 2.4rem; margin: 10px 0; }
   border-radius: 10px;
   font-weight: 600;
   text-align: center;
+  transition: transform 0.3s;
 }
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin: 12px;
-  padding: 12px 24px;
-  background: #2563eb;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-}
-
-.btn:hover { background: #1d4ed8; }
+.highlight-box:hover { transform: translateY(-5px); }
 
 /* SECTIONS */
 section {
   max-width: 1100px;
   margin: auto;
   padding: 80px 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section-title {
@@ -146,15 +145,16 @@ section {
   border-radius: 14px;
   border-left: 4px solid #2563eb;
   box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
 }
+
+.card:hover { transform: translateY(-6px); }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
-
-ul { padding-left: 18px; }
 
 /* SCWK */
 .scwk-band {
@@ -168,13 +168,44 @@ ul { padding-left: 18px; }
   border-radius: 14px;
   padding: 20px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
 }
 
-/* CONTACT */
-.contact {
-  text-align: center;
+.scwk-card:hover { transform: translateY(-6px); }
+
+/* POSTS */
+.post-card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
 }
 
+.post-card:hover { transform: translateY(-5px); }
+
+.post-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.post-desc {
+  color: #4b5563;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin: 12px;
+  padding: 12px 24px;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -194,6 +225,7 @@ footer {
 <li><a href="#experience">Experience</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#scwk">SCWK</a></li>
+<li><a href="#posts">Posts</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -201,20 +233,15 @@ footer {
 
 <!-- HERO -->
 
-<section class="hero">
+<section class="hero show">
 <div class="profile-container">
 <img src="profile.jpg">
 </div>
 
 <h1>Karthik Dave</h1>
 <div class="hero-role">Agile Delivery Leader | Scrum Master | Business Analyst</div>
-
 <div class="badge">Certified ScrumMaster® (CSM)</div>
-<div class="scwk-tag">Founder – SCWK (Scrum & Coffee with Karthik)</div>
-
-<p>
-15+ years in IT driving Agile delivery, stakeholder alignment, and enterprise transformation.
-</p>
+<div class="scwk-tag">Founder – SCWK</div>
 
 <div class="highlights">
 <div class="highlight-box">15+ Years IT</div>
@@ -222,97 +249,75 @@ footer {
 <div class="highlight-box">17 Member Team</div>
 <div class="highlight-box">SCWK Creator</div>
 </div>
-
 </section>
 
 <!-- EXPERIENCE -->
 
 <section id="experience">
 <h2 class="section-title">Professional Experience</h2>
-
 <div class="timeline">
-
 <div class="card">
-<h3>Associate Manager – Accenture</h3>
+<h3>Accenture</h3>
 <ul>
-<li>Leading Agile delivery for enterprise transformation programs</li>
-<li>Improved sprint velocity by ~20–25%</li>
-<li>Reduced delivery cycle time by ~15%</li>
-<li>Driving stakeholder alignment across teams</li>
+<li>Improved sprint velocity by 20–25%</li>
+<li>Reduced delivery cycle by 15%</li>
 </ul>
 </div>
-
 <div class="card">
-<h3>Business Analyst & Scrum Master – YASH Technologies</h3>
+<h3>YASH Technologies</h3>
 <ul>
-<li>Managed 17-member cross-functional team</li>
-<li>Played dual role as BA and Scrum Master</li>
-<li>Facilitated Agile ceremonies and backlog management</li>
-<li>Improved delivery predictability and collaboration</li>
+<li>Led 17-member Agile team</li>
+<li>Handled BA + Scrum roles</li>
 </ul>
 </div>
-
 </div>
-
 </section>
 
 <!-- SKILLS -->
 
 <section id="skills">
-<h2 class="section-title">Skills & Expertise</h2>
-
+<h2 class="section-title">Skills</h2>
 <div class="timeline">
-
-<div class="card">
-<h3>Core Skills</h3>
-<ul>
-<li>Agile Delivery & Scrum</li>
-<li>Business Analysis</li>
-<li>Stakeholder Management</li>
-<li>Delivery Governance</li>
-</ul>
+<div class="card">Agile | Scrum | BA | Stakeholders</div>
+<div class="card">JIRA | ADO | SCM Domain</div>
 </div>
-
-<div class="card">
-<h3>Tools & Domain</h3>
-<ul>
-<li>JIRA, Azure DevOps</li>
-<li>Confluence, SQL, Power BI</li>
-<li>Supply Chain (SCM)</li>
-</ul>
-</div>
-
-</div>
-
 </section>
 
 <!-- SCWK -->
 
 <section id="scwk">
 <div class="scwk-band">
+<h2 class="section-title">SCWK</h2>
 
-<h2 class="section-title">SCWK – Scrum & Coffee with Karthik</h2>
-<p class="section-sub">
-A personal initiative simplifying Agile into practical insights.
-</p>
+<div class="grid">
+<div class="scwk-card">Simplifying Agile</div>
+<div class="scwk-card">Lites | Bites | Dose</div>
+<div class="scwk-card">Real-world insights</div>
+</div>
+
+</div>
+</section>
+
+<!-- POSTS -->
+
+<section id="posts">
+<h2 class="section-title">SCWK Insights</h2>
 
 <div class="grid">
 
-<div class="scwk-card">
-<h3>What is SCWK?</h3>
-<p>Breaking down Agile concepts into real-world actionable learning.</p>
+<div class="post-card">
+<div class="post-title">⚡ SCWK Shot #1</div>
+<div class="post-desc">Agile is not standups. It’s decision speed.</div>
 </div>
 
-<div class="scwk-card">
-<h3>Formats</h3>
-<p>SCWK Lites, Bites, and Dose — quick, structured learning.</p>
+<div class="post-card">
+<div class="post-title">⚡ SCWK Shot #2</div>
+<div class="post-desc">Velocity is not performance. It’s predictability.</div>
 </div>
 
-<div class="scwk-card">
-<h3>Purpose</h3>
-<p>Making Agile simple, practical, and usable beyond theory.</p>
-</div>
-
+<div class="post-card">
+<div class="post-title">⚡ SCWK Shot #3</div>
+<div class="post-desc">Scrum Master is not a coordinator. It’s a change agent.</div>
 </div>
 
 </div>
@@ -323,19 +328,31 @@ A personal initiative simplifying Agile into practical insights.
 <section id="contact">
 <h2 class="section-title">Let’s Connect</h2>
 
-<div class="contact">
-<p>Open to opportunities, collaborations, and discussions.</p>
-
 <a class="btn" href="https://www.linkedin.com/in/karthik-dave-csm" target="_blank">
 Connect on LinkedIn
 </a>
 
-</div>
 </section>
 
 <footer>
 © 2026 Karthik Dave
 </footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  sections.forEach(section => {
+    const boxTop = section.getBoundingClientRect().top;
+
+    if(boxTop < triggerBottom){
+      section.classList.add("show");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
