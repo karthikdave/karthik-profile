@@ -1,72 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Karthik Dave | Agile Leader</title>
 
 <style>
-:root {
-  --bg: #f6f8fb;
-  --card: #ffffff;
-  --text: #111;
-  --muted: #666;
-  --accent: #0a66c2;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
+  background: #f5f7fb;
+  color: #1a1a1a;
+  scroll-behavior: smooth;
 }
 
 /* NAVBAR */
-nav {
-  position: sticky;
+.nav {
+  position: fixed;
   top: 0;
+  width: 100%;
   background: rgba(255,255,255,0.9);
   backdrop-filter: blur(10px);
-  padding: 16px 50px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 15px 40px;
   z-index: 1000;
   border-bottom: 1px solid #eee;
 }
 
-nav a {
-  margin-left: 25px;
+.nav a {
   text-decoration: none;
+  margin-left: 20px;
   color: #333;
   font-weight: 500;
 }
 
-/* SECTION */
-.section {
-  padding: 80px 50px;
+/* SECTIONS */
+section {
+  padding: 100px 60px;
+}
+
+.container {
   max-width: 1100px;
   margin: auto;
-}
-
-h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
-}
-
-h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-p {
-  color: var(--muted);
-  line-height: 1.6;
 }
 
 /* HERO */
@@ -76,46 +57,31 @@ p {
   gap: 40px;
 }
 
-/* 🔥 FIXED IMAGE (NO CUT) */
 .hero img {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  object-fit: contain;
-  background: #fff;
-  padding: 5px;
-  border: 3px solid #eee;
+  object-fit: cover;
 }
 
-/* CARD */
-.card {
-  background: var(--card);
-  padding: 28px;
-  border-radius: 18px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
-  margin-bottom: 20px;
-  transition: 0.3s;
+.hero h1 {
+  font-size: 32px;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+.hero p {
+  color: #666;
+  margin-top: 10px;
 }
 
 /* BUTTONS */
 .btn {
-  padding: 12px 20px;
+  display: inline-block;
+  padding: 10px 18px;
   border-radius: 10px;
   text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-  margin-top: 10px;
+  margin-right: 10px;
+  margin-top: 15px;
+  font-weight: 500;
 }
 
 .primary {
@@ -124,139 +90,156 @@ p {
 }
 
 .secondary {
-  background: #eee;
-  color: #000;
+  background: #eaeaea;
+  color: #111;
 }
 
-/* TAG */
-.tag {
-  display: inline-block;
-  background: #eef3ff;
-  color: #0a66c2;
-  padding: 5px 10px;
-  border-radius: 8px;
-  font-size: 12px;
+/* CARDS */
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* LINKEDIN CARD */
+.post-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.post-card h4 {
   margin-bottom: 10px;
 }
+
+.post-card p {
+  color: #555;
+  font-size: 14px;
+}
+
+.post-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0a66c2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+
 </style>
 </head>
 
 <body>
 
 <!-- NAV -->
-<nav>
-  <div><b>Karthik Dave</b></div>
+<div class="nav">
+  <div><strong>Karthik Dave</strong></div>
   <div>
     <a href="#experience">Experience</a>
     <a href="#scwk">SCWK</a>
     <a href="#insights">Insights</a>
-    <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
   </div>
-</nav>
+</div>
 
 <!-- HERO -->
-<section class="section hero">
-  <img src="profile.jpg" alt="Profile">
-  <div>
-    <h1>Karthik Dave</h1>
-    <p>Agile Leader | Scrum Master (CSM®) | Business Analyst</p>
-    <p style="margin-top:10px;">
-      Driving Agile transformation, leading cross-functional teams, and delivering business value across enterprise environments.
-    </p>
+<section>
+  <div class="container hero">
+    <img src="profile.jpg" alt="profile"/>
+    <div>
+      <h1>Karthik Dave</h1>
+      <p>CSM® | Agile Leader | Business Analyst</p>
+
+      <a href="Karthik_Dave_Resume.pdf" target="_blank" class="btn primary">
+        👁 View Resume
+      </a>
+
+      <a href="Karthik_Dave_Resume.pdf" download class="btn secondary">
+        ⬇ Download Resume
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="section">
-  <h2>Experience</h2>
+<section id="experience">
+  <div class="container">
+    <h2>Experience</h2>
 
-  <div class="card">
-    <span class="tag">Accenture</span>
-    <h3>Scrum Master</h3>
-    <p>Leading Agile teams, facilitating Scrum ceremonies, removing blockers, and ensuring consistent delivery across enterprise-scale programs.</p>
-  </div>
-
-  <div class="card">
-    <span class="tag">YASH Technologies</span>
-    <h3>Business Analyst & Scrum Master</h3>
-    <p>Handled a cross-functional team of 17 (Dev, QA, Architect). Managed backlog, stakeholder alignment, and Agile execution.</p>
-  </div>
-
-</section>
-
-<!-- SCWK -->
-<section id="scwk" class="section">
-  <h2>SCWK</h2>
-
-  <div class="card">
-    <h3>Simplifying Complex Work Knowledge</h3>
-    <p>
-      SCWK is my initiative where I simplify Agile, Scrum, and real-world delivery challenges into practical, actionable insights.
-    </p>
-  </div>
-
-  <div class="grid">
     <div class="card">
-      <h4>SCWK Dose</h4>
-      <p>Deep insights for professionals working in Agile environments.</p>
+      <h3>Accenture</h3>
+      <p>Agile / BA – Leading Agile delivery, stakeholder alignment, sprint execution.</p>
     </div>
 
     <div class="card">
-      <h4>SCWK AI Shots</h4>
-      <p>Quick takes on AI in Agile and delivery ecosystems.</p>
+      <h3>Yash Technologies</h3>
+      <p>BA & Scrum Master – Managed 17-member cross-functional team.</p>
+    </div>
+
+    <div class="card">
+      <h3>Earlier Roles</h3>
+      <p>Business analysis, requirement gathering, and delivery coordination.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SCWK -->
+<section id="scwk">
+  <div class="container">
+    <h2>SCWK</h2>
+
+    <div class="card">
+      <p><strong>SCWK = Scrum • Content • Wisdom • Knowledge</strong></p>
+      <p>I create structured Agile content on LinkedIn including SCWK Doses, Bites, and AI Shots — helping professionals understand Agile in a practical way.</p>
     </div>
   </div>
 </section>
 
 <!-- INSIGHTS -->
-<section id="insights" class="section">
-  <h2>Latest Insights</h2>
+<section id="insights">
+  <div class="container">
+    <h2>Latest Insights</h2>
 
-  <div class="grid">
-    <div class="card">
-      <h3>AI Won’t Save Your ART</h3>
-      <p>Strong foundations matter more than tools.</p>
+    <div class="grid">
+
+      <div class="post-card">
+        <h4>AI Won’t Save Your ART</h4>
+        <p>Strong Agile foundations matter more than tools. AI is an enabler, not a replacement.</p>
+        <a href="https://www.linkedin.com/" target="_blank">View on LinkedIn →</a>
+      </div>
+
+      <div class="post-card">
+        <h4>Scrum is Not Standup</h4>
+        <p>Daily standups don’t make you Agile. Delivery mindset does.</p>
+        <a href="https://www.linkedin.com/" target="_blank">View on LinkedIn →</a>
+      </div>
+
     </div>
-
-    <div class="card">
-      <h3>Agile is Not Standups</h3>
-      <p>It’s about delivery mindset, not rituals.</p>
-    </div>
-  </div>
-</section>
-
-<!-- RESUME -->
-<section id="resume" class="section">
-  <h2>Resume</h2>
-
-  <div class="card">
-    <p><b>Certified Scrum Master (CSM®)</b> with 5+ years of experience in Agile delivery, stakeholder management, and cross-team leadership.</p>
-
-    <p style="margin-top:10px;">
-      ✔ Led multiple Agile teams across enterprise projects  
-      ✔ Improved delivery predictability and team velocity  
-      ✔ Strong experience in Scrum, stakeholder collaboration, and execution  
-    </p>
-
-    <a href="./Karthik_Dave_Resume.pdf#toolbar=1" target="_blank" class="btn primary">
-      👁 View Resume
-    </a>
-
-    <a href="./Karthik_Dave_Resume.pdf" download class="btn secondary">
-      ⬇ Download Resume
-    </a>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
-  <h2>Contact</h2>
+<section id="contact">
+  <div class="container contact">
+    <h2>Contact</h2>
+    <p>Let’s connect for Agile roles, consulting, or collaboration.</p>
 
-  <div class="card">
-    <p>Let’s connect and collaborate.</p>
-
-    <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="btn primary">
+    <a href="https://www.linkedin.com/in/YOUR-USERNAME" target="_blank" class="btn primary">
       Connect on LinkedIn
     </a>
   </div>
