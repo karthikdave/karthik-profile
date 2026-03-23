@@ -21,9 +21,8 @@ body {
 header {
   position: sticky;
   top: 0;
-  background: #ffffff;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-  z-index: 1000;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 nav {
@@ -40,13 +39,10 @@ nav ul {
   gap: 18px;
 }
 
-nav a { text-decoration: none; color: #374151; }
-nav a:hover { color: #2563eb; }
-
 /* HERO */
 .hero {
   text-align: center;
-  padding-top: 120px;
+  padding: 120px 20px 60px;
   background: linear-gradient(to bottom, #eef2ff, #ffffff);
 }
 
@@ -65,55 +61,27 @@ nav a:hover { color: #2563eb; }
   object-position: center 20%;
 }
 
-h1 { font-size: 2.4rem; margin: 10px 0; }
+h1 { font-size: 2.4rem; }
 
-.hero-role {
-  color: #2563eb;
-  font-weight: 600;
-}
+.hero-role { color: #2563eb; font-weight: 600; }
 
 .badge {
   background: #e0f2fe;
-  color: #0369a1;
   padding: 6px 12px;
   border-radius: 20px;
   display: inline-block;
-  margin-top: 8px;
 }
 
-.scwk-tag {
-  margin-top: 10px;
-  font-weight: 600;
-  color: #7c3aed;
-}
+.scwk-tag { color: #7c3aed; font-weight: 600; }
 
-/* HIGHLIGHTS */
-.highlights {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  margin-top: 25px;
-}
-
-.highlight-box {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  font-weight: 600;
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.highlight-box:hover { transform: translateY(-5px); }
-
-/* SECTIONS */
+/* SECTION */
 section {
   max-width: 1100px;
   margin: auto;
   padding: 80px 20px;
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s ease;
+  transition: 0.8s;
 }
 
 section.show {
@@ -124,88 +92,54 @@ section.show {
 .section-title {
   text-align: center;
   font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.section-sub {
-  text-align: center;
-  color: #6b7280;
-  margin-bottom: 30px;
-}
-
-/* CARDS */
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 }
 
 .card {
   background: white;
-  padding: 22px;
-  border-radius: 14px;
+  padding: 20px;
+  border-radius: 12px;
   border-left: 4px solid #2563eb;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
 }
 
-.card:hover { transform: translateY(-6px); }
-
+/* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 /* SCWK */
 .scwk-band {
   background: linear-gradient(to right, #eef2ff, #f5f3ff);
+  padding: 40px;
   border-radius: 16px;
-  padding: 40px 20px;
 }
-
-.scwk-card {
-  background: white;
-  border-radius: 14px;
-  padding: 20px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
-}
-
-.scwk-card:hover { transform: translateY(-6px); }
 
 /* POSTS */
 .post-card {
   background: white;
-  border-radius: 14px;
-  padding: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
 }
 
-.post-card:hover { transform: translateY(-5px); }
-
-.post-title {
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.post-desc {
-  color: #4b5563;
-  font-size: 14px;
-}
-
-/* BUTTON */
+/* CONTACT */
 .btn {
-  display: inline-block;
-  margin: 12px;
-  padding: 12px 24px;
+  padding: 12px 22px;
   background: #2563eb;
   color: white;
   border-radius: 8px;
   text-decoration: none;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -225,7 +159,6 @@ footer {
 <li><a href="#experience">Experience</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#scwk">SCWK</a></li>
-<li><a href="#posts">Posts</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -239,48 +172,83 @@ footer {
 </div>
 
 <h1>Karthik Dave</h1>
-<div class="hero-role">Agile Delivery Leader | Scrum Master | Business Analyst</div>
-<div class="badge">Certified ScrumMaster® (CSM)</div>
+<div class="hero-role">Business Analyst | Scrum Master | Agile Leader</div>
+
+<div class="badge">Certified ScrumMaster (CSM)</div>
 <div class="scwk-tag">Founder – SCWK</div>
 
-<div class="highlights">
-<div class="highlight-box">15+ Years IT</div>
-<div class="highlight-box">7+ Years Agile</div>
-<div class="highlight-box">17 Member Team</div>
-<div class="highlight-box">SCWK Creator</div>
-</div>
+<p>14+ years in Supply Chain, Logistics, Agile delivery, and Business Analysis.</p>
 </section>
 
 <!-- EXPERIENCE -->
 
 <section id="experience">
 <h2 class="section-title">Professional Experience</h2>
+
 <div class="timeline">
+
 <div class="card">
-<h3>Accenture</h3>
+<h3>Accenture – Associate Manager (2025–Present)</h3>
 <ul>
-<li>Improved sprint velocity by 20–25%</li>
-<li>Reduced delivery cycle by 15%</li>
+<li>Leading Agile delivery and stakeholder alignment</li>
+<li>Driving sprint governance and backlog prioritization</li>
+<li>Ensuring delivery tracking and risk visibility</li>
 </ul>
 </div>
+
 <div class="card">
-<h3>YASH Technologies</h3>
+<h3>YASH Technologies – Business Analyst & Scrum Master (2022–2024)</h3>
 <ul>
-<li>Led 17-member Agile team</li>
-<li>Handled BA + Scrum roles</li>
+<li>Improved operational efficiency via data analytics</li>
+<li>Implemented Agile practices improving productivity</li>
+<li>Led UAT validation and stakeholder collaboration</li>
 </ul>
 </div>
+
+<div class="card">
+<h3>Mphasis – Senior Business Analyst (2016–2017)</h3>
+<ul>
+<li>Optimized supply chain processes</li>
+<li>Improved forecasting accuracy up to 95%</li>
+<li>Reduced procurement costs through analytics</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>BDO Consulting – Consultant (Qatar)</h3>
+<p>Business consulting and process analysis</p>
+</div>
+
+<div class="card">
+<h3>Ford Technology Services</h3>
+<p>Software Analyst – Supply chain systems</p>
+</div>
+
+<div class="card">
+<h3>R Systems International</h3>
+<p>Systems Analyst – Enterprise solutions</p>
+</div>
+
+<div class="card">
+<h3>Allsec Technologies</h3>
+<p>Client Support Executive – Early career</p>
+</div>
+
 </div>
 </section>
 
 <!-- SKILLS -->
 
 <section id="skills">
-<h2 class="section-title">Skills</h2>
-<div class="timeline">
-<div class="card">Agile | Scrum | BA | Stakeholders</div>
-<div class="card">JIRA | ADO | SCM Domain</div>
+<h2 class="section-title">Skills & Expertise</h2>
+
+<div class="grid">
+<div class="card">Agile, Scrum, Stakeholder Mgmt</div>
+<div class="card">Supply Chain, Logistics</div>
+<div class="card">Azure DevOps, JIRA, Confluence</div>
+<div class="card">Data Analytics & Forecasting</div>
 </div>
+
 </section>
 
 <!-- SCWK -->
@@ -290,34 +258,9 @@ footer {
 <h2 class="section-title">SCWK</h2>
 
 <div class="grid">
-<div class="scwk-card">Simplifying Agile</div>
-<div class="scwk-card">Lites | Bites | Dose</div>
-<div class="scwk-card">Real-world insights</div>
-</div>
-
-</div>
-</section>
-
-<!-- POSTS -->
-
-<section id="posts">
-<h2 class="section-title">SCWK Insights</h2>
-
-<div class="grid">
-
-<div class="post-card">
-<div class="post-title">⚡ SCWK Shot #1</div>
-<div class="post-desc">Agile is not standups. It’s decision speed.</div>
-</div>
-
-<div class="post-card">
-<div class="post-title">⚡ SCWK Shot #2</div>
-<div class="post-desc">Velocity is not performance. It’s predictability.</div>
-</div>
-
-<div class="post-card">
-<div class="post-title">⚡ SCWK Shot #3</div>
-<div class="post-desc">Scrum Master is not a coordinator. It’s a change agent.</div>
+<div class="card">Simplifying Agile concepts</div>
+<div class="card">SCWK Lites | Bites | Dose</div>
+<div class="card">Real-world Agile insights</div>
 </div>
 
 </div>
@@ -328,7 +271,7 @@ footer {
 <section id="contact">
 <h2 class="section-title">Let’s Connect</h2>
 
-<a class="btn" href="https://www.linkedin.com/in/karthik-dave-csm" target="_blank">
+<a class="btn" href="https://www.linkedin.com/in/karthik-dave-csm">
 Connect on LinkedIn
 </a>
 
@@ -342,12 +285,10 @@ Connect on LinkedIn
 const sections = document.querySelectorAll("section");
 
 window.addEventListener("scroll", () => {
-  const triggerBottom = window.innerHeight * 0.85;
+  const trigger = window.innerHeight * 0.85;
 
   sections.forEach(section => {
-    const boxTop = section.getBoundingClientRect().top;
-
-    if(boxTop < triggerBottom){
+    if(section.getBoundingClientRect().top < trigger){
       section.classList.add("show");
     }
   });
