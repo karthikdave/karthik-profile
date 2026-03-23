@@ -61,8 +61,8 @@ section {
 }
 
 .profile-container {
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   margin: auto;
   border-radius: 50%;
   overflow: hidden;
@@ -75,15 +75,19 @@ section {
   object-position: center 20%;
 }
 
-h1 { font-size: 2.5rem; }
+h1 { font-size: 2.4rem; margin: 10px 0; }
 
 .hero-role {
   color: #2563eb;
   font-weight: 600;
 }
 
-p { color: #4b5563; }
+.summary {
+  max-width: 800px;
+  margin: 10px auto;
+}
 
+/* BUTTONS */
 .btn {
   display: inline-block;
   margin: 10px;
@@ -99,22 +103,17 @@ p { color: #4b5563; }
   border: 2px solid #2563eb;
 }
 
-/* SECTIONS */
+/* STRUCTURE */
 .section-title {
   text-align: center;
   font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.section-intro {
-  text-align: center;
-  max-width: 850px;
-  margin: auto;
-  margin-bottom: 30px;
-}
-
-.section-alt {
-  background: #f1f5f9;
-  border-radius: 16px;
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
 .card {
@@ -123,25 +122,38 @@ p { color: #4b5563; }
   border-radius: 14px;
   border-left: 4px solid #2563eb;
   box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-  margin-bottom: 20px;
 }
 
-.grid {
+ul { padding-left: 18px; }
+li { margin-bottom: 8px; }
+
+.section-alt {
+  background: #f1f5f9;
+  border-radius: 16px;
+}
+
+/* HIGHLIGHTS */
+.highlights {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
 }
 
-/* LIST */
-ul {
-  padding-left: 18px;
+.highlight-box {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
-li {
-  margin-bottom: 8px;
+/* MOBILE */
+@media(max-width: 768px){
+  .two-col { grid-template-columns: 1fr; }
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -162,7 +174,6 @@ footer {
 <li><a href="#experience">Experience</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#scwk">SCWK</a></li>
-<li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 </header>
@@ -177,20 +188,27 @@ footer {
 <h1>Karthik Dave</h1>
 <div class="hero-role">Associate Manager | Agile Delivery | Scrum Master | Business Analyst</div>
 
-<p>
-15+ years of IT experience with 7+ years in Agile Delivery, Scrum Mastery, and Business Analysis across enterprise transformation programs.
+<p class="summary">
+Agile Delivery leader with 15+ years in IT and 7+ years in Scrum, Business Analysis, and transformation programs — enabling teams, aligning stakeholders, and delivering measurable outcomes.
 </p>
 
-<a class="btn" href="https://www.linkedin.com/in/karthik-dave-csm" target="_blank">LinkedIn</a> <a class="btn btn-secondary" href="Karthik_Dave_Resume.pdf" target="_blank">Download Resume</a>
+<div class="highlights">
+<div class="highlight-box">15+ Years IT</div>
+<div class="highlight-box">7+ Years Agile</div>
+<div class="highlight-box">SCM Domain</div>
+<div class="highlight-box">Enterprise Delivery</div>
+</div>
+
+<a class="btn" href="https://www.linkedin.com/in/karthik-dave-csm" target="_blank">LinkedIn</a> <a class="btn btn-secondary" href="Karthik_Dave_Resume.pdf" target="_blank">Resume</a>
 
 </section>
 
 <!-- ABOUT -->
 
 <section id="about">
-<h2 class="section-title">About Me</h2>
-<p class="section-intro">
-Experienced IT professional specializing in Agile Delivery, Business Analysis, and digital transformation. Known for enabling teams, simplifying complex requirements, and driving stakeholder alignment to deliver measurable outcomes.
+<h2 class="section-title">About</h2>
+<p style="text-align:center; max-width:800px; margin:auto;">
+I specialize in bridging business and technology — translating complex requirements into structured delivery, enabling teams, and driving alignment across stakeholders and programs.
 </p>
 </section>
 
@@ -199,24 +217,28 @@ Experienced IT professional specializing in Agile Delivery, Business Analysis, a
 <section id="experience" class="section-alt">
 <h2 class="section-title">Professional Experience</h2>
 
+<div class="two-col">
+
 <div class="card">
-<h3>Associate Manager – Accenture (Sep 2025 – Present)</h3>
+<h3>Associate Manager – Accenture</h3>
 <ul>
-<li>Leading Agile delivery across enterprise transformation initiatives</li>
-<li>Driving stakeholder alignment and delivery governance</li>
-<li>Facilitating Scrum ceremonies and team enablement</li>
-<li>Ensuring end-to-end delivery execution and business value realization</li>
+<li>Led Agile delivery across enterprise transformation initiatives</li>
+<li>Enabled cross-functional teams and improved delivery alignment</li>
+<li>Managed stakeholders and ensured business value delivery</li>
+<li>Facilitated Scrum ceremonies and continuous improvement</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Previous Experience</h3>
+<h3>Key Contributions</h3>
 <ul>
-<li>15+ years in IT delivery, enterprise applications, and SCM domain</li>
-<li>7+ years as Scrum Master, Agile Delivery Lead, and Business Analyst</li>
-<li>Worked across cross-functional teams and global stakeholders</li>
-<li>Handled requirement analysis, backlog management, and delivery tracking</li>
+<li>Improved delivery efficiency through Agile practices</li>
+<li>Strengthened stakeholder communication and alignment</li>
+<li>Simplified complex business requirements into execution plans</li>
+<li>Supported large-scale enterprise program delivery</li>
 </ul>
+</div>
+
 </div>
 
 </section>
@@ -226,37 +248,28 @@ Experienced IT professional specializing in Agile Delivery, Business Analysis, a
 <section id="skills">
 <h2 class="section-title">Skills & Expertise</h2>
 
-<div class="grid">
+<div class="two-col">
+
 <div class="card">
-<h3>Core Competencies</h3>
+<h3>Core Skills</h3>
 <ul>
-<li>Agile Delivery Management</li>
-<li>Scrum Mastery</li>
+<li>Agile Delivery & Scrum</li>
 <li>Business Analysis</li>
 <li>Stakeholder Management</li>
-<li>Digital Transformation</li>
+<li>Delivery Governance</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Tools & Technologies</h3>
+<h3>Tools & Domain</h3>
 <ul>
-<li>JIRA</li>
-<li>Azure DevOps (ADO)</li>
-<li>Confluence</li>
-<li>SQL</li>
-<li>Power BI</li>
+<li>JIRA, Azure DevOps, Confluence</li>
+<li>SQL, Power BI</li>
+<li>Supply Chain (SCM)</li>
+<li>Enterprise Transformation</li>
 </ul>
 </div>
 
-<div class="card">
-<h3>Domain Expertise</h3>
-<ul>
-<li>Supply Chain Management (SCM)</li>
-<li>Enterprise Systems</li>
-<li>Transformation Programs</li>
-</ul>
-</div>
 </div>
 
 </section>
@@ -264,43 +277,38 @@ Experienced IT professional specializing in Agile Delivery, Business Analysis, a
 <!-- SCWK -->
 
 <section id="scwk" class="section-alt">
-
 <h2 class="section-title">SCWK – Scrum & Coffee with Karthik</h2>
 
-<p class="section-intro">
-SCWK is my personal thought leadership initiative where I share practical insights on Agile, delivery, and professional growth — simplifying concepts into real-world learning.
+<p style="text-align:center; max-width:800px; margin:auto;">
+SCWK is my thought leadership initiative where I simplify Agile and delivery concepts into practical, real-world insights for professionals.
 </p>
 
-<div class="grid">
+<div class="two-col">
+
 <div class="card">
 <h3>What I Share</h3>
-<p>Agile insights, delivery lessons, and workplace learnings from real experience.</p>
+<ul>
+<li>Agile and Scrum insights</li>
+<li>Delivery lessons from real projects</li>
+<li>Workplace and career growth perspectives</li>
+</ul>
 </div>
 
 <div class="card">
 <h3>Formats</h3>
-<p>SCWK Lites, Bites, and Dose — designed for quick and structured learning.</p>
+<ul>
+<li>SCWK Lites – quick insights</li>
+<li>SCWK Bites – visual breakdowns</li>
+<li>SCWK Dose – structured learning</li>
+</ul>
 </div>
 
-<div class="card">
-<h3>Purpose</h3>
-<p>To make Agile simple, relatable, and actionable.</p>
-</div>
 </div>
 
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-<h2 class="section-title">Let’s Connect</h2>
-<p style="text-align:center;">
-<a class="btn" href="https://www.linkedin.com/in/karthik-dave-csm">Connect on LinkedIn</a>
-</p>
 </section>
 
 <footer>
-© 2026 Karthik Dave | Agile Delivery & Business Analysis
+© 2026 Karthik Dave
 </footer>
 
 </body>
