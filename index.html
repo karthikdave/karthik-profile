@@ -1,82 +1,101 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-<title>Karthik Dave</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-body {
-  font-family: Arial;
-  margin: 0;
-  padding-top: 60px;
-}
-
-.nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #fff;
-  padding: 15px;
-  border-bottom: 1px solid #ccc;
-}
-
-.nav a {
-  margin-right: 15px;
-  text-decoration: none;
-  color: black;
-}
-
-section {
-  padding: 60px 20px;
-}
-
-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px;
-  margin-top: 10px;
-  text-decoration: none;
-  border: 1px solid black;
-}
-</style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karthik Dave | Agile Leader & SCWK</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="nav">
-  <a href="#home">Home</a>
-  <a href="#experience">Experience</a>
-  <a href="#contact">Contact</a>
-</div>
+<!-- HEADER / NAVBAR -->
+<header>
+  <nav>
+    <div><strong>Karthik Dave</strong></div>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#scwk">SCWK</a></li>
+      <li><a href="#posts">Posts</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-<section id="home">
+<!-- HERO -->
+<section class="hero fade show">
+  <div class="profile-container">
+    <img src="profile.jpg" alt="Karthik Dave">
+  </div>
+
   <h1>Karthik Dave</h1>
-  <img src="profile.jpg">
-  <p>Agile Scrum Master | BA | 15+ Years</p>
-
-  <br>
-
-<a href="Karthik_Dave_Resume.pdf" target="_blank" class="btn">View Resume</a> <a href="Karthik_Dave_Resume.pdf" download class="btn">Download Resume</a>
-
+  <p><b>Agile Scrum Master | Business Analyst</b></p>
+  <p>15+ Years | SCM Domain | CSM Certified</p>
 </section>
 
-<section id="experience">
-  <h2>Experience</h2>
-  <p>Accenture, Yash Technologies, Mphasis, BDO, Ford, R Systems, Allsec</p>
+<!-- EXPERIENCE -->
+<section id="experience" class="fade">
+  <h2>Professional Experience</h2>
+  <div class="card">Accenture – Associate Manager</div>
+  <div class="card">YASH Technologies – BA & Scrum Master (Team Size: 17)</div>
+  <div class="card">Mphasis – Senior Business Analyst</div>
+  <div class="card">BDO Consulting – Qatar</div>
+  <div class="card">Ford Technology Services</div>
+  <div class="card">R Systems</div>
+  <div class="card">Allsec Technologies</div>
 </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <a href="https://www.linkedin.com/in/karthik-dave-csm" target="_blank">LinkedIn</a>
+<!-- SKILLS -->
+<section id="skills" class="fade">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">Agile, Scrum, Stakeholder Mgmt</div>
+    <div class="card">Supply Chain, Logistics</div>
+    <div class="card">JIRA, ADO</div>
+    <div class="card">Business Analysis</div>
+  </div>
 </section>
 
+<!-- SCWK -->
+<section id="scwk" class="fade">
+  <div class="scwk">
+    <h2>SCWK – Scrum With Karthik</h2>
+    <p>SCWK is a <b>personal Agile brand</b> focused on simplifying Scrum into real-world application.</p>
+
+    <div class="grid">
+      <div class="card"><b>Lites</b><br>Quick learning</div>
+      <div class="card"><b>Bites</b><br>Practical breakdowns</div>
+      <div class="card"><b>Dose</b><br>Deep insights</div>
+    </div>
+
+    <div class="card"><b>Mission:</b> Make Agile practical</div>
+    <div class="card"><b>Focus:</b> Real-world scenarios</div>
+  </div>
+</section>
+
+<!-- POSTS -->
+<section id="posts" class="fade">
+  <h2>SCWK Insights</h2>
+  <div class="grid">
+    <div class="card">Agile is not meetings</div>
+    <div class="card">Velocity ≠ performance</div>
+    <div class="card">Scrum Master = change agent</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="fade">
+  <h2>Let’s Connect</h2>
+  <a class="btn" href="https://www.linkedin.com/in/karthik-dave-csm" target="_blank">Connect on LinkedIn</a>
+  <a class="btn" href="resume.pdf" download>Download Resume</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Karthik Dave
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
