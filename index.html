@@ -7,18 +7,26 @@
 <title>Karthik Dave | Agile Leader & SCWK</title>
 
 <style>
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
+
+/* KEY FIX */
+section {
+  scroll-margin-top: 100px; /* prevents section from hiding under navbar */
+}
+
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  padding-top: 80px; /* prevents overlap */
+  padding-top: 80px;
   font-family: "Segoe UI", Arial, sans-serif;
   background: #f8fafc;
   color: #1f2937;
 }
 
-/* HEADER - FIXED ALWAYS */
+/* HEADER */
 header {
   position: fixed;
   top: 0;
@@ -35,37 +43,18 @@ nav {
   padding: 14px 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 18px;
-  margin: 0;
 }
 
 nav a {
   text-decoration: none;
   color: #374151;
-  position: relative;
 }
-
-nav a:hover { color: #2563eb; }
-
-/* underline animation */
-nav a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: #2563eb;
-  left: 0;
-  bottom: -4px;
-  transition: 0.3s;
-}
-
-nav a:hover::after { width: 100%; }
 
 /* HERO */
 .hero {
@@ -86,30 +75,16 @@ nav a:hover::after { width: 100%; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
 }
 
-h1 { font-size: 2.4rem; margin: 10px 0; }
-
-.hero-role { color: #2563eb; font-weight: 600; }
-
-.badge {
-  background: #e0f2fe;
-  padding: 6px 12px;
-  border-radius: 20px;
-  display: inline-block;
-}
-
-.scwk-tag { color: #7c3aed; font-weight: 600; }
-
-/* SECTIONS + ANIMATION */
+/* SECTIONS ANIMATION */
 section {
   max-width: 1100px;
   margin: auto;
   padding: 80px 20px;
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s ease;
+  transition: 0.8s;
 }
 
 section.show {
@@ -120,57 +95,13 @@ section.show {
 .section-title {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 .card {
   background: white;
   padding: 20px;
+  margin-bottom: 15px;
   border-radius: 12px;
-  border-left: 4px solid #2563eb;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
-}
-
-.card:hover { transform: translateY(-5px); }
-
-.grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-/* SCWK */
-.scwk-band {
-  background: linear-gradient(to right, #eef2ff, #f5f3ff);
-  padding: 40px;
-  border-radius: 16px;
-}
-
-/* POSTS */
-.post-card {
-  background: white;
-  padding: 16px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
-}
-
-.post-card:hover { transform: translateY(-5px); }
-
-/* BUTTON */
-.btn {
-  padding: 12px 22px;
-  background: #2563eb;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
 }
 
 /* FOOTER */
@@ -199,117 +130,36 @@ footer {
 </nav>
 </header>
 
-<!-- HERO -->
-
 <section class="hero show">
-<div class="profile-container">
-<img src="profile.jpg">
-</div>
-
 <h1>Karthik Dave</h1>
-<div class="hero-role">Business Analyst | Scrum Master | Agile Leader</div>
-
-<div class="badge">Certified ScrumMaster (CSM)</div>
-<div class="scwk-tag">Founder – SCWK</div>
-
-<p>14+ years in Supply Chain, Logistics, Agile delivery, and Business Analysis.</p>
+<p>Agile Leader | Scrum Master</p>
 </section>
-
-<!-- EXPERIENCE -->
 
 <section id="experience">
-<h2 class="section-title">Professional Experience</h2>
-
-<div class="timeline">
-
-<div class="card">
-<h3>Accenture – Associate Manager (2025–Present)</h3>
-<p>Agile delivery, stakeholder alignment, sprint governance.</p>
-</div>
-
-<div class="card">
-<h3>YASH Technologies – BA & Scrum Master</h3>
-<p>Improved productivity via Agile & analytics.</p>
-</div>
-
-<div class="card">
-<h3>Mphasis – Senior BA</h3>
-<p>95% forecasting accuracy improvement.</p>
-</div>
-
-<div class="card">
-<h3>BDO Consulting (Qatar)</h3>
-<p>Consulting & process analysis.</p>
-</div>
-
-<div class="card">
-<h3>Ford Technology Services</h3>
-<p>Supply chain systems.</p>
-</div>
-
-<div class="card">
-<h3>R Systems</h3>
-<p>Enterprise solutions.</p>
-</div>
-
-<div class="card">
-<h3>Allsec Technologies</h3>
-<p>Client support.</p>
-</div>
-
-</div>
+<h2 class="section-title">Experience</h2>
+<div class="card">Accenture</div>
+<div class="card">YASH</div>
+<div class="card">Mphasis</div>
 </section>
-
-<!-- SKILLS -->
 
 <section id="skills">
 <h2 class="section-title">Skills</h2>
-
-<div class="grid">
-<div class="card">Agile, Scrum, Stakeholder Mgmt</div>
-<div class="card">Supply Chain, Logistics</div>
-<div class="card">JIRA, ADO, Confluence</div>
-<div class="card">Data Analytics</div>
-</div>
+<div class="card">Agile, Scrum</div>
 </section>
-
-<!-- SCWK -->
 
 <section id="scwk">
-<div class="scwk-band">
 <h2 class="section-title">SCWK</h2>
-
-<div class="grid">
 <div class="card">Agile Simplified</div>
-<div class="card">Lites | Bites | Dose</div>
-<div class="card">Real-world insights</div>
-</div>
-
-</div>
 </section>
-
-<!-- POSTS -->
 
 <section id="posts">
-<h2 class="section-title">SCWK Insights</h2>
-
-<div class="grid">
-<div class="post-card">⚡ Agile is not meetings</div>
-<div class="post-card">⚡ Velocity ≠ performance</div>
-<div class="post-card">⚡ Scrum Master = change agent</div>
-</div>
-
+<h2 class="section-title">Posts</h2>
+<div class="card">SCWK Shots</div>
 </section>
 
-<!-- CONTACT -->
-
 <section id="contact">
-<h2 class="section-title">Let’s Connect</h2>
-
-<a class="btn" href="https://www.linkedin.com/in/karthik-dave-csm" target="_blank">
-Connect on LinkedIn
-</a>
-
+<h2 class="section-title">Contact</h2>
+<div class="card">LinkedIn</div>
 </section>
 
 <footer>
