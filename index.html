@@ -77,7 +77,6 @@ h1 { font-size: 2.4rem; }
   margin-top: 8px;
 }
 
-/* SCWK HERO TAG */
 .scwk-tag {
   margin-top: 10px;
   font-weight: 600;
@@ -100,16 +99,6 @@ h1 { font-size: 2.4rem; }
   text-align: center;
 }
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin: 12px;
-  padding: 12px 24px;
-  background: #2563eb;
-  color: white;
-  border-radius: 8px;
-}
-
 /* SECTIONS */
 section {
   max-width: 1100px;
@@ -120,8 +109,16 @@ section {
 .section-title {
   text-align: center;
   font-size: 2rem;
+  margin-bottom: 10px;
 }
 
+.section-sub {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* CARDS */
 .timeline {
   display: flex;
   flex-direction: column;
@@ -136,11 +133,6 @@ section {
   box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
 
-.section-alt {
-  background: #f1f5f9;
-  border-radius: 16px;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -149,6 +141,26 @@ section {
 
 ul { padding-left: 18px; }
 
+/* SCWK SPECIAL */
+.scwk-band {
+  background: linear-gradient(to right, #eef2ff, #f5f3ff);
+  border-radius: 16px;
+  padding: 40px 20px;
+}
+
+.scwk-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.scwk-card:hover {
+  transform: translateY(-6px);
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -186,7 +198,7 @@ footer {
 <div class="scwk-tag">Founder – SCWK (Scrum & Coffee with Karthik)</div>
 
 <p>
-15+ years in IT driving Agile delivery, stakeholder alignment, and enterprise transformation — with a passion for simplifying Agile through SCWK.
+15+ years of IT experience driving Agile delivery, stakeholder alignment, and enterprise transformation.
 </p>
 
 <div class="highlights">
@@ -196,13 +208,11 @@ footer {
 <div class="highlight-box">SCWK Creator</div>
 </div>
 
-<a class="btn" href="https://www.linkedin.com/in/karthik-dave-csm">LinkedIn</a>
-
 </section>
 
 <!-- EXPERIENCE -->
 
-<section id="experience" class="section-alt">
+<section id="experience">
 <h2 class="section-title">Professional Experience</h2>
 
 <div class="timeline">
@@ -213,6 +223,7 @@ footer {
 <li>Leading Agile delivery for enterprise transformation programs</li>
 <li>Improved sprint velocity by ~20–25%</li>
 <li>Reduced delivery cycle time by ~15%</li>
+<li>Driving stakeholder alignment across teams</li>
 </ul>
 </div>
 
@@ -221,6 +232,7 @@ footer {
 <ul>
 <li>Managed 17-member cross-functional team</li>
 <li>Played dual role as BA and Scrum Master</li>
+<li>Facilitated Agile ceremonies and backlog management</li>
 <li>Improved delivery predictability and collaboration</li>
 </ul>
 </div>
@@ -261,32 +273,40 @@ footer {
 
 <!-- SCWK -->
 
-<section id="scwk" class="section-alt">
-<h2 class="section-title">SCWK – Scrum & Coffee with Karthik</h2>
+<section id="scwk">
+<div class="scwk-band">
 
-<p style="text-align:center; max-width:800px; margin:auto;">
-SCWK is my personal brand initiative focused on simplifying Agile, Scrum, and delivery concepts into practical, relatable insights for professionals.
+<h2 class="section-title">SCWK – Scrum & Coffee with Karthik</h2>
+<p class="section-sub">
+A personal brand initiative simplifying Agile into practical, real-world insights.
 </p>
 
 <div class="grid">
 
-<div class="card">
+<div class="scwk-card">
 <h3>What is SCWK?</h3>
-<p>A platform where Agile meets real-world experience — breaking down complex concepts into simple learning.</p>
+<p>
+A platform where Agile meets real execution — breaking down concepts into actionable learning.
+</p>
 </div>
 
-<div class="card">
+<div class="scwk-card">
 <h3>Content Formats</h3>
-<p>SCWK Lites, Bites, and Dose — structured for quick and effective learning.</p>
+<p>
+SCWK Lites, Bites, and Dose — designed for quick, structured, and impactful learning.
+</p>
 </div>
 
-<div class="card">
-<h3>Why SCWK?</h3>
-<p>To make Agile simple, practical, and usable — beyond theory.</p>
+<div class="scwk-card">
+<h3>Why it Matters</h3>
+<p>
+Focused on making Agile simple, relatable, and usable in real project environments.
+</p>
 </div>
 
 </div>
 
+</div>
 </section>
 
 <footer>
