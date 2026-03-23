@@ -4,7 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Karthik Dave | Agile Leader & SCWK</title>
+
+<title>Karthik Dave | Agile Leader</title>
 
 <style>
 html { scroll-behavior: smooth; }
@@ -13,9 +14,9 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   padding-top: 80px;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f8fafc;
-  color: #1f2937;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #ffffff;
+  color: #1d1d1f;
 }
 
 /* NAVBAR */
@@ -23,46 +24,36 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(10px);
-  z-index: 9999;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(12px);
+  z-index: 999;
+  border-bottom: 1px solid #eee;
 }
 
 nav {
   max-width: 1100px;
   margin: auto;
-  padding: 14px 20px;
+  padding: 16px 20px;
   display: flex;
   justify-content: space-between;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 18px;
-  margin: 0;
+  gap: 20px;
+  list-style: none;
 }
 
 nav a {
   text-decoration: none;
-  color: #374151;
+  color: #333;
   font-weight: 500;
-}
-
-/* FIX scroll overlap */
-section {
-  scroll-margin-top: 100px;
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 20px;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 120px 20px 60px;
-  background: linear-gradient(to bottom, #eef2ff, #ffffff);
+  padding: 140px 20px 80px;
 }
 
 .profile-container {
@@ -71,7 +62,6 @@ section {
   margin: auto;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .profile-container img {
@@ -81,52 +71,34 @@ section {
   object-position: center 15%;
 }
 
-/* TEXT */
-h1 { margin: 10px 0; font-size: 2.4rem; }
-h2 { text-align: center; margin-bottom: 25px; }
-
-/* CARDS */
-.card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
-  transition: 0.3s;
+h1 {
+  font-size: 3rem;
+  margin: 15px 0;
 }
 
-.card:hover { transform: translateY(-5px); }
-
-/* GRID */
-.grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
 }
 
-/* SCWK */
-.scwk {
-  background: linear-gradient(to right, #eef2ff, #f5f3ff);
-  padding: 40px;
-  border-radius: 16px;
-}
-
-/* BUTTON */
-.btn {
+.badge {
   display: inline-block;
-  padding: 12px 22px;
-  background: #2563eb;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: 0.3s;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: #f1f5f9;
+  border-radius: 20px;
+  font-size: 14px;
 }
 
-.btn:hover {
-  background: #1d4ed8;
+/* SECTIONS */
+section {
+  scroll-margin-top: 100px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
 }
 
-/* ANIMATION */
+/* FADE ANIMATION */
 .fade {
   opacity: 0;
   transform: translateY(40px);
@@ -138,12 +110,57 @@ h2 { text-align: center; margin-bottom: 25px; }
   transform: translateY(0);
 }
 
+/* CARDS */
+.card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+}
+
+/* SCWK */
+.scwk {
+  background: linear-gradient(to right, #f8fafc, #eef2ff);
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* POSTS */
+.post {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+/* BUTTON */
+.btn {
+  padding: 14px 26px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
-  background: #111827;
-  color: #d1d5db;
+  padding: 30px;
+  color: #777;
 }
 </style>
 
@@ -156,9 +173,8 @@ footer {
 <div><strong>Karthik Dave</strong></div>
 <ul>
 <li><a href="#experience">Experience</a></li>
-<li><a href="#skills">Skills</a></li>
 <li><a href="#scwk">SCWK</a></li>
-<li><a href="#posts">Posts</a></li>
+<li><a href="#posts">Insights</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -168,41 +184,29 @@ footer {
 
 <section class="hero fade show">
 <div class="profile-container">
-<img src="profile.jpg" alt="Karthik Dave">
+<img src="profile.jpg">
 </div>
 
 <h1>Karthik Dave</h1>
-<p><b>Agile Scrum Master | Business Analyst</b></p>
-<p>15+ Years | SCM Domain | CSM Certified</p>
+<div class="subtitle">Agile Leader • Scrum Master • Business Analyst</div>
+
+<div class="badge">15+ Years • SCM • CSM Certified</div>
 </section>
 
 <!-- EXPERIENCE -->
 
 <section id="experience" class="fade">
-<h2>Professional Experience</h2>
+<h2>Experience</h2>
 
+<div class="grid">
 <div class="card">Accenture – Associate Manager</div>
-<div class="card">YASH Technologies – BA & Scrum Master (Team Size: 17)</div>
-<div class="card">Mphasis – Senior Business Analyst</div>
+<div class="card">YASH Technologies – Scrum Master (Team: 17)</div>
+<div class="card">Mphasis – Senior BA</div>
 <div class="card">BDO Consulting – Qatar</div>
 <div class="card">Ford Technology Services</div>
 <div class="card">R Systems</div>
 <div class="card">Allsec Technologies</div>
-
-</section>
-
-<!-- SKILLS -->
-
-<section id="skills" class="fade">
-<h2>Skills</h2>
-
-<div class="grid">
-<div class="card">Agile, Scrum, Stakeholder Mgmt</div>
-<div class="card">Supply Chain, Logistics</div>
-<div class="card">JIRA, ADO</div>
-<div class="card">Business Analysis</div>
 </div>
-
 </section>
 
 <!-- SCWK -->
@@ -213,30 +217,35 @@ footer {
 <h2>SCWK – Scrum With Karthik</h2>
 
 <p>
-SCWK is a <b>personal Agile brand</b> focused on simplifying Scrum into real-world application.
+A personal brand simplifying Agile into real-world execution.
 </p>
 
 <div class="grid">
-<div class="card"><b>Lites</b><br>Quick learning</div>
-<div class="card"><b>Bites</b><br>Practical breakdowns</div>
-<div class="card"><b>Dose</b><br>Deep insights</div>
+<div class="card">Lites – Quick learning</div>
+<div class="card">Bites – Practical breakdowns</div>
+<div class="card">Dose – Deep insights</div>
 </div>
-
-<div class="card"><b>Mission:</b> Make Agile practical</div>
-<div class="card"><b>Focus:</b> Real-world scenarios</div>
 
 </div>
 </section>
 
-<!-- POSTS -->
+<!-- POSTS (REAL LINKEDIN EMBEDS) -->
 
 <section id="posts" class="fade">
-<h2>SCWK Insights</h2>
+<h2>Latest Insights</h2>
 
 <div class="grid">
-<div class="card">Agile is not meetings</div>
-<div class="card">Velocity ≠ performance</div>
-<div class="card">Scrum Master = change agent</div>
+
+<div class="post">
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:YOUR_POST_ID"
+height="350" width="100%" frameborder="0"></iframe>
+</div>
+
+<div class="post">
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:YOUR_POST_ID"
+height="350" width="100%" frameborder="0"></iframe>
+</div>
+
 </div>
 
 </section>
