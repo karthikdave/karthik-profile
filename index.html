@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Karthik Dave | Agile Delivery & Business Analysis</title>
+<title>Karthik Dave | Agile Delivery Leader</title>
 
 <style>
 html { scroll-behavior: smooth; }
@@ -17,14 +17,12 @@ body {
   color: #1f2937;
 }
 
-a { text-decoration: none; }
-
 /* NAV */
 header {
   position: sticky;
   top: 0;
   background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
 }
 
 nav {
@@ -34,8 +32,6 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-
-.logo { font-weight: 700; }
 
 nav ul {
   list-style: none;
@@ -50,14 +46,15 @@ nav ul li a:hover { color: #2563eb; }
 section {
   max-width: 1100px;
   margin: auto;
-  padding: 70px 20px;
+  padding: 80px 20px;
 }
 
 /* HERO */
 .hero {
   text-align: center;
   padding-top: 120px;
-  background: linear-gradient(to bottom, #eef2ff, #f8fafc);
+  background: linear-gradient(to bottom, #eef2ff, #ffffff);
+  animation: fadeIn 1.2s ease-in;
 }
 
 .profile-container {
@@ -66,6 +63,7 @@ section {
   margin: auto;
   border-radius: 50%;
   overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
 .profile-container img {
@@ -82,34 +80,52 @@ h1 { font-size: 2.4rem; margin: 10px 0; }
   font-weight: 600;
 }
 
-.summary {
-  max-width: 800px;
-  margin: 10px auto;
+.badge {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+/* HIGHLIGHTS */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.highlight-box {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.highlight-box:hover {
+  transform: translateY(-5px);
 }
 
 /* BUTTONS */
 .btn {
   display: inline-block;
-  margin: 10px;
-  padding: 12px 22px;
+  margin: 12px;
+  padding: 12px 24px;
   background: #2563eb;
   color: white;
   border-radius: 8px;
 }
 
-.btn-secondary {
-  background: white;
-  color: #2563eb;
-  border: 2px solid #2563eb;
+.btn:hover {
+  background: #1d4ed8;
 }
 
-/* STRUCTURE */
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
+/* CARDS */
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -122,35 +138,33 @@ h1 { font-size: 2.4rem; margin: 10px 0; }
   border-radius: 14px;
   border-left: 4px solid #2563eb;
   box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
 }
 
-ul { padding-left: 18px; }
-li { margin-bottom: 8px; }
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* SECTIONS */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 
 .section-alt {
   background: #f1f5f9;
   border-radius: 16px;
 }
 
-/* HIGHLIGHTS */
-.highlights {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.highlight-box {
-  background: #ffffff;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  font-weight: 600;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+/* ANIMATION */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
 }
 
 /* MOBILE */
-@media(max-width: 768px){
+@media(max-width:768px){
   .two-col { grid-template-columns: 1fr; }
 }
 
@@ -168,9 +182,8 @@ footer {
 
 <header>
 <nav>
-<div class="logo">Karthik Dave</div>
+<div><strong>Karthik Dave</strong></div>
 <ul>
-<li><a href="#about">About</a></li>
 <li><a href="#experience">Experience</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#scwk">SCWK</a></li>
@@ -186,10 +199,12 @@ footer {
 </div>
 
 <h1>Karthik Dave</h1>
-<div class="hero-role">Associate Manager | Agile Delivery | Scrum Master | Business Analyst</div>
+<div class="hero-role">Agile Delivery Leader | Scrum Master | Business Analyst</div>
 
-<p class="summary">
-Agile Delivery leader with 15+ years in IT and 7+ years in Scrum, Business Analysis, and transformation programs — enabling teams, aligning stakeholders, and delivering measurable outcomes.
+<div class="badge">Certified ScrumMaster® (CSM)</div>
+
+<p>
+15+ years in IT with strong focus on Agile delivery, stakeholder alignment, and enterprise transformation programs.
 </p>
 
 <div class="highlights">
@@ -199,17 +214,8 @@ Agile Delivery leader with 15+ years in IT and 7+ years in Scrum, Business Analy
 <div class="highlight-box">Enterprise Delivery</div>
 </div>
 
-<a class="btn" href="https://www.linkedin.com/in/karthik-dave-csm" target="_blank">LinkedIn</a> <a class="btn btn-secondary" href="Karthik_Dave_Resume.pdf" target="_blank">Resume</a>
+<a class="btn" href="https://www.linkedin.com/in/karthik-dave-csm">LinkedIn</a>
 
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-<h2 class="section-title">About</h2>
-<p style="text-align:center; max-width:800px; margin:auto;">
-I specialize in bridging business and technology — translating complex requirements into structured delivery, enabling teams, and driving alignment across stakeholders and programs.
-</p>
 </section>
 
 <!-- EXPERIENCE -->
@@ -222,20 +228,20 @@ I specialize in bridging business and technology — translating complex require
 <div class="card">
 <h3>Associate Manager – Accenture</h3>
 <ul>
-<li>Led Agile delivery across enterprise transformation initiatives</li>
-<li>Enabled cross-functional teams and improved delivery alignment</li>
-<li>Managed stakeholders and ensured business value delivery</li>
-<li>Facilitated Scrum ceremonies and continuous improvement</li>
+<li>Leading Agile delivery for enterprise transformation initiatives</li>
+<li>Driving stakeholder alignment across business and technology teams</li>
+<li>Facilitating Scrum ceremonies and enabling team performance</li>
+<li>Ensuring delivery governance and outcome alignment</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Key Contributions</h3>
+<h3>Impact & Contributions</h3>
 <ul>
-<li>Improved delivery efficiency through Agile practices</li>
-<li>Strengthened stakeholder communication and alignment</li>
-<li>Simplified complex business requirements into execution plans</li>
-<li>Supported large-scale enterprise program delivery</li>
+<li>Improved team delivery efficiency through Agile practices</li>
+<li>Enhanced stakeholder communication and visibility</li>
+<li>Streamlined requirement-to-delivery lifecycle</li>
+<li>Supported large-scale enterprise programs</li>
 </ul>
 </div>
 
@@ -263,8 +269,8 @@ I specialize in bridging business and technology — translating complex require
 <div class="card">
 <h3>Tools & Domain</h3>
 <ul>
-<li>JIRA, Azure DevOps, Confluence</li>
-<li>SQL, Power BI</li>
+<li>JIRA, Azure DevOps</li>
+<li>Confluence, SQL, Power BI</li>
 <li>Supply Chain (SCM)</li>
 <li>Enterprise Transformation</li>
 </ul>
@@ -279,31 +285,9 @@ I specialize in bridging business and technology — translating complex require
 <section id="scwk" class="section-alt">
 <h2 class="section-title">SCWK – Scrum & Coffee with Karthik</h2>
 
-<p style="text-align:center; max-width:800px; margin:auto;">
-SCWK is my thought leadership initiative where I simplify Agile and delivery concepts into practical, real-world insights for professionals.
+<p style="text-align:center;">
+A personal initiative where I simplify Agile concepts into practical insights for professionals.
 </p>
-
-<div class="two-col">
-
-<div class="card">
-<h3>What I Share</h3>
-<ul>
-<li>Agile and Scrum insights</li>
-<li>Delivery lessons from real projects</li>
-<li>Workplace and career growth perspectives</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Formats</h3>
-<ul>
-<li>SCWK Lites – quick insights</li>
-<li>SCWK Bites – visual breakdowns</li>
-<li>SCWK Dose – structured learning</li>
-</ul>
-</div>
-
-</div>
 
 </section>
 
