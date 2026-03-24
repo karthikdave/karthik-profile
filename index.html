@@ -23,7 +23,7 @@ html { scroll-behavior: smooth; }
 }
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .card {
@@ -31,10 +31,9 @@ html { scroll-behavior: smooth; }
 }
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
-/* Highlight numbers */
 .metric {
   font-weight: bold;
   color: #1d4ed8;
@@ -64,25 +63,54 @@ html { scroll-behavior: smooth; }
   </div>
 </header>
 
+<!-- WHY HIRE ME -->
+<section class="bg-blue-700 text-white text-center py-4">
+  <p class="text-sm md:text-base">
+    ✔ 14+ Years Experience | ✔ Agile & Scrum Expert | ✔ Proven Business Impact | ✔ Data-Driven Delivery
+  </p>
+</section>
+
 <!-- HERO -->
-<section class="bg-white py-20 fade-in text-center">
+<section class="bg-gradient-to-r from-blue-50 to-blue-100 py-20 text-center fade-in">
+
   <h1 class="text-4xl md:text-5xl font-bold text-blue-700 mb-6">
     Delivering Measurable Business Impact through Agile Execution
   </h1>
 
-  <p class="text-lg text-gray-600 mb-8">
-    14+ Years | Business Analyst | Scrum Master | Supply Chain | Healthcare
+  <p class="text-lg text-gray-700 mb-10">
+    Business Analyst | Scrum Master | Supply Chain | Healthcare
   </p>
 
+  <!-- METRICS -->
+  <div class="flex justify-center gap-10 mb-10 flex-wrap">
+    <div>
+      <div class="text-3xl font-bold text-blue-700">14+</div>
+      <div class="text-sm text-gray-600">Years Experience</div>
+    </div>
+
+    <div>
+      <div class="text-3xl font-bold text-blue-700">95%</div>
+      <div class="text-sm text-gray-600">Forecast Accuracy</div>
+    </div>
+
+    <div>
+      <div class="text-3xl font-bold text-blue-700">20%</div>
+      <div class="text-sm text-gray-600">Faster Delivery</div>
+    </div>
+  </div>
+
   <div class="flex justify-center gap-4 flex-wrap">
-    <a href="Karthik_Dave_Resume.pdf" target="_blank" class="btn bg-blue-700 text-white px-6 py-3 rounded-lg">
+    <a href="Karthik_Dave_Resume.pdf" target="_blank"
+       class="btn bg-blue-700 text-white px-6 py-3 rounded-lg">
       View Resume
     </a>
 
-    <a href="Karthik_Dave_Resume.pdf" download class="btn bg-green-600 text-white px-6 py-3 rounded-lg">
+    <a href="Karthik_Dave_Resume.pdf" download
+       class="btn bg-green-600 text-white px-6 py-3 rounded-lg">
       Download Resume
     </a>
   </div>
+
 </section>
 
 <!-- ABOUT -->
@@ -95,8 +123,7 @@ class="w-44 h-44 rounded-full object-cover object-top border shadow-md">
 <h2 class="text-3xl font-bold mb-4">About Me</h2>
 
 <p class="mb-5 text-gray-600 leading-relaxed">
-Business Analyst and Certified Scrum Master with 14+ years of experience delivering measurable outcomes 
-across Supply Chain and Healthcare domains through Agile execution, data insights, and stakeholder collaboration.
+Business Analyst and Certified Scrum Master with 14+ years of experience delivering measurable outcomes across Supply Chain and Healthcare domains through Agile execution, data insights, and stakeholder collaboration.
 </p>
 
 <p><strong>Email:</strong> Karthik.dave@gmail.com</p>
@@ -127,68 +154,22 @@ View Profile
   </a>
 </div>
 
-<!-- YASH -->
 <div class="card bg-gray-50 p-6 rounded-lg mb-6">
 <h3 class="font-bold text-lg">YASH Technologies (2022–2024)</h3>
-<p class="text-sm text-gray-500 mb-3">Business Analyst / Scrum Role</p>
-
-<ul class="list-disc ml-6 space-y-1 text-gray-700 text-sm">
-<li>Enabled Agile delivery leading to <span class="metric">20% faster sprint completion</span></li>
-<li>Improved data validation accuracy by <span class="metric">30%</span> using SQL analysis</li>
-<li>Reduced UAT defects by <span class="metric">25%</span> through structured validation approach</li>
-<li>Facilitated Scrum ceremonies improving team collaboration and velocity</li>
-<li>Defined KPIs and dashboards enabling data-driven decision-making</li>
-<li>Supported Healthcare workflows ensuring compliance alignment</li>
+<ul class="list-disc ml-6 text-sm text-gray-700 space-y-1">
+<li>Achieved <span class="metric">20% faster sprint delivery</span> through Agile optimization</li>
+<li>Improved data validation accuracy by <span class="metric">30%</span></li>
+<li>Reduced UAT defects by <span class="metric">25%</span></li>
+<li>Led Scrum ceremonies improving team efficiency</li>
 </ul>
 </div>
 
-<!-- MPHASIS -->
 <div class="card bg-gray-50 p-6 rounded-lg mb-6">
-<h3 class="font-bold text-lg">Mphasis (2016–2017)</h3>
-
-<ul class="list-disc ml-6 space-y-1 text-gray-700 text-sm">
-<li>Improved forecasting accuracy by <span class="metric">95%</span> through data analysis</li>
-<li>Optimized supply chain planning reducing operational gaps</li>
-<li>Enhanced reporting efficiency for business stakeholders</li>
+<h3 class="font-bold text-lg">Mphasis</h3>
+<ul class="list-disc ml-6 text-sm text-gray-700 space-y-1">
+<li>Improved forecasting accuracy to <span class="metric">95%</span></li>
+<li>Optimized supply chain planning and reporting</li>
 </ul>
-</div>
-
-<!-- OTHER -->
-<div class="card bg-gray-50 p-6 rounded-lg mb-6">
-<h3 class="font-bold text-lg">Previous Experience</h3>
-
-<ul class="list-disc ml-6 space-y-1 text-gray-700 text-sm">
-<li>Handled multiple enterprise clients across BDO, Ford, R Systems, Allsec</li>
-<li>Supported end-to-end delivery and operations</li>
-<li>Contributed to business process improvements and reporting</li>
-</ul>
-</div>
-
-<!-- SKILLS -->
-<div class="grid md:grid-cols-2 gap-6">
-
-<div class="card bg-gray-50 p-6 rounded-lg">
-<h3 class="font-semibold mb-2">Core Skills</h3>
-<ul class="list-disc ml-6 text-sm text-gray-600 space-y-1">
-<li>Agile & Scrum</li>
-<li>Business Analysis</li>
-<li>Stakeholder Management</li>
-<li>UAT & Validation</li>
-<li>Process Improvement</li>
-</ul>
-</div>
-
-<div class="card bg-gray-50 p-6 rounded-lg">
-<h3 class="font-semibold mb-2">Tools & Technologies</h3>
-<ul class="list-disc ml-6 text-sm text-gray-600 space-y-1">
-<li>Azure DevOps</li>
-<li>GitLab</li>
-<li>SQL</li>
-<li>Power BI</li>
-<li>Excel Power Pivot</li>
-</ul>
-</div>
-
 </div>
 
 </div>
@@ -202,26 +183,22 @@ SCWK – Scrum and Coffee with Karthik ☕
 </h2>
 
 <p class="mb-6 text-gray-600">
-A personal brand focused on simplifying Agile, Scrum, and real-world delivery experiences.
+A personal brand where I simplify Agile, Scrum, and real-world delivery.
 </p>
 
-<div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow card text-left">
+<div class="max-w-3xl mx-auto grid md:grid-cols-3 gap-4">
 
-<ul class="list-disc ml-6 space-y-2 text-gray-600 mb-6">
-<li>Agile Simplified</li>
-<li>Scrum in Real Projects</li>
-<li>BA + Scrum Mindset</li>
-<li>Workflow Optimization</li>
-</ul>
+<div class="card bg-white p-4 rounded-lg shadow">Agile Simplified</div>
+<div class="card bg-white p-4 rounded-lg shadow">Scrum in Practice</div>
+<div class="card bg-white p-4 rounded-lg shadow">BA + Scrum Mindset</div>
 
-<div class="text-center">
+</div>
+
+<div class="mt-6">
 <a href="https://linkedin.com/in/karthik-dave-csm"
-target="_blank"
 class="btn bg-blue-700 text-white px-6 py-2 rounded-lg">
 Explore SCWK
 </a>
-</div>
-
 </div>
 
 </section>
@@ -248,4 +225,4 @@ LinkedIn
 </section>
 
 </body>
-</html>v
+</html>
