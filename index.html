@@ -8,13 +8,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    section {
-      scroll-margin-top: 120px;
-    }
+    html { scroll-behavior: smooth; }
+    section { scroll-margin-top: 120px; }
   </style>
 </head>
 
@@ -68,14 +63,16 @@
   </div>
 </section>
 
-<!-- ABOUT WITH IMAGE -->
-<section id="about" class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-8">
+<!-- ABOUT -->
+<section id="about" class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-10">
 
-  <!-- PROFILE IMAGE -->
-  <img src="profile.jpg"
-       class="w-44 h-44 rounded-full object-cover object-center border shadow">
+  <!-- IMAGE FIXED -->
+  <div class="relative">
+    <img src="profile.jpg"
+         class="w-48 h-48 rounded-full object-cover object-[50%_20%] shadow-xl ring-4 ring-white">
+  </div>
 
-  <!-- ABOUT TEXT -->
+  <!-- TEXT -->
   <div>
     <h2 class="text-2xl font-bold mb-4">About</h2>
 
