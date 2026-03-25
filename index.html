@@ -10,6 +10,25 @@
   <style>
     html { scroll-behavior: smooth; }
     section { scroll-margin-top: 120px; }
+
+    /* 🔥 Premium hover effects (SAFE) */
+    .card {
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+
+    .btn {
+      transition: all 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    }
   </style>
 </head>
 
@@ -55,19 +74,19 @@
 
   <div class="flex justify-center gap-4 flex-wrap">
     <a href="Karthik_Dave_Resume.pdf" target="_blank"
-       class="bg-blue-700 text-white px-6 py-2 rounded-lg">
+       class="btn bg-blue-700 text-white px-6 py-2 rounded-lg">
       View Resume
     </a>
 
     <a href="Karthik_Dave_Resume.pdf" download
-       class="bg-green-600 text-white px-6 py-2 rounded-lg">
+       class="btn bg-green-600 text-white px-6 py-2 rounded-lg">
       Download Resume
     </a>
   </div>
 
 </section>
 
-<!-- IMPACT SNAPSHOT -->
+<!-- IMPACT -->
 <section id="impact" class="py-12 bg-white">
 <div class="max-w-6xl mx-auto px-6">
 
@@ -75,22 +94,22 @@
 
 <div class="grid md:grid-cols-4 gap-6 text-center">
 
-<div class="bg-gray-50 p-6 rounded-lg shadow">
+<div class="card bg-gray-50 p-6 rounded-lg">
 <h3 class="text-2xl font-bold text-blue-700">20%</h3>
 <p class="text-sm text-gray-600">Faster Sprint Delivery</p>
 </div>
 
-<div class="bg-gray-50 p-6 rounded-lg shadow">
+<div class="card bg-gray-50 p-6 rounded-lg">
 <h3 class="text-2xl font-bold text-blue-700">25%</h3>
 <p class="text-sm text-gray-600">Defect Reduction</p>
 </div>
 
-<div class="bg-gray-50 p-6 rounded-lg shadow">
+<div class="card bg-gray-50 p-6 rounded-lg">
 <h3 class="text-2xl font-bold text-blue-700">95%</h3>
 <p class="text-sm text-gray-600">Forecast Accuracy</p>
 </div>
 
-<div class="bg-gray-50 p-6 rounded-lg shadow">
+<div class="card bg-gray-50 p-6 rounded-lg">
 <h3 class="text-2xl font-bold text-blue-700">High</h3>
 <p class="text-sm text-gray-600">Stakeholder Alignment</p>
 </div>
@@ -133,31 +152,24 @@ View Profile
 
 <div class="space-y-6">
 
-<div class="bg-white p-6 rounded-lg shadow">
+<div class="card bg-white p-6 rounded-lg">
 <h3 class="font-bold">Accenture (Sep 2025 – Present)</h3>
 <p class="text-sm text-gray-600 mt-2">
 Driving Agile delivery by improving sprint predictability, enabling strong stakeholder alignment, and ensuring high-quality releases through effective UAT and backlog management.
 </p>
 </div>
 
-<div class="bg-white p-6 rounded-lg shadow">
+<div class="card bg-white p-6 rounded-lg">
 <h3 class="font-bold">YASH Technologies</h3>
 <p class="text-sm text-gray-600 mt-2">
-Led Agile transformation initiatives resulting in faster sprint cycles, reduced defects, and improved data validation processes, contributing to enhanced delivery efficiency.
+Led Agile transformation initiatives resulting in faster sprint cycles, reduced defects, and improved data validation processes.
 </p>
 </div>
 
-<div class="bg-white p-6 rounded-lg shadow">
+<div class="card bg-white p-6 rounded-lg">
 <h3 class="font-bold">Mphasis</h3>
 <p class="text-sm text-gray-600 mt-2">
-Delivered data-driven forecasting solutions achieving high accuracy and optimizing supply chain operations through analytical insights and process improvements.
-</p>
-</div>
-
-<div class="bg-white p-6 rounded-lg shadow">
-<h3 class="font-bold">Earlier Experience</h3>
-<p class="text-sm text-gray-600 mt-2">
-BDO Consulting • Ford Technology Services • R Systems • Allsec Technologies
+Delivered data-driven forecasting solutions achieving high accuracy and optimizing supply chain operations.
 </p>
 </div>
 
@@ -174,21 +186,10 @@ BDO Consulting • Ford Technology Services • R Systems • Allsec Technologie
 
 <div class="grid md:grid-cols-2 gap-6">
 
-<div class="bg-gray-50 p-5 rounded-lg shadow">
-Agile Delivery & Scrum Leadership
-</div>
-
-<div class="bg-gray-50 p-5 rounded-lg shadow">
-Business Analysis & Process Optimization
-</div>
-
-<div class="bg-gray-50 p-5 rounded-lg shadow">
-Data Analytics & Predictive Forecasting
-</div>
-
-<div class="bg-gray-50 p-5 rounded-lg shadow">
-UAT, QA & Release Governance
-</div>
+<div class="card bg-gray-50 p-5 rounded-lg">Agile Delivery & Scrum Leadership</div>
+<div class="card bg-gray-50 p-5 rounded-lg">Business Analysis & Process Optimization</div>
+<div class="card bg-gray-50 p-5 rounded-lg">Data Analytics & Forecasting</div>
+<div class="card bg-gray-50 p-5 rounded-lg">UAT, QA & Release Governance</div>
 
 </div>
 
@@ -203,13 +204,13 @@ SCWK – Scrum and Coffee with Karthik ☕
 </h2>
 
 <p class="text-gray-600 mb-6 max-w-xl mx-auto">
-A personal initiative where I share practical Agile insights, real-world delivery experiences, and simplified Scrum concepts to help professionals grow in their Agile journey.
+Where Agile meets real-world delivery — sharing practical insights, lessons, and simplified Scrum concepts.
 </p>
 
 <a href="https://linkedin.com/in/karthik-dave-csm"
 target="_blank"
-class="bg-blue-700 text-white px-6 py-2 rounded-lg">
-Explore SCWK on LinkedIn
+class="btn bg-blue-700 text-white px-6 py-2 rounded-lg">
+Explore SCWK
 </a>
 
 </section>
@@ -222,13 +223,13 @@ Explore SCWK on LinkedIn
 <div class="flex justify-center gap-4 flex-wrap">
 
 <a href="mailto:Karthik.dave@gmail.com"
-class="bg-blue-700 text-white px-6 py-2 rounded w-48">
+class="btn bg-blue-700 text-white px-6 py-2 rounded w-48">
 Email
 </a>
 
 <a href="https://linkedin.com/in/karthik-dave-csm"
 target="_blank"
-class="bg-green-600 text-white px-6 py-2 rounded w-48">
+class="btn bg-green-600 text-white px-6 py-2 rounded w-48">
 LinkedIn
 </a>
 
