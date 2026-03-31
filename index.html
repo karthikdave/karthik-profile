@@ -24,18 +24,26 @@
 
 <!-- HEADER -->
 <header class="bg-white shadow sticky top-0 z-50">
-  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center py-4 px-4 sm:px-6">
-    <div class="text-center sm:text-left mb-2 sm:mb-0">
-      <h1 class="text-3xl md:text-4xl font-bold text-blue-700">
+  <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-4 sm:px-6">
+
+    <!-- LOGO -->
+    <div>
+      <h1 class="text-2xl md:text-3xl font-bold text-blue-700">
         Karthik Dave 
-        <span class="text-sm bg-blue-100 text-blue-700 px-2 py-1 rounded-full">
+        <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">
           CSM<sup>®</sup>
         </span>
       </h1>
-      <p class="text-sm text-gray-600">Business Analyst • Scrum Master • Agile Delivery</p>
+      <p class="text-xs text-gray-600 hidden sm:block">Business Analyst • Scrum Master • Agile Delivery</p>
     </div>
 
-    <nav class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-5 text-sm font-medium text-center">
+    <!-- HAMBURGER -->
+    <button id="menu-btn" class="sm:hidden text-2xl">
+      ☰
+    </button>
+
+    <!-- DESKTOP NAV -->
+    <nav class="hidden sm:flex space-x-5 text-sm font-medium">
       <a href="#about">About</a>
       <a href="#impact">Impact</a>
       <a href="#resume">Experience</a>
@@ -43,38 +51,51 @@
       <a href="#scwk">SCWK</a>
       <a href="#contact">Contact</a>
     </nav>
+
+  </div>
+
+  <!-- MOBILE NAV -->
+  <div id="mobile-menu" class="hidden sm:hidden px-4 pb-4">
+    <div class="flex flex-col space-y-3 text-sm font-medium">
+      <a href="#about">About</a>
+      <a href="#impact">Impact</a>
+      <a href="#resume">Experience</a>
+      <a href="#skills">Expertise</a>
+      <a href="#scwk">SCWK</a>
+      <a href="#contact">Contact</a>
+    </div>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="py-12 md:py-20 text-center bg-gradient-to-r from-blue-50 to-blue-100 px-4 sm:px-6">
+<section class="py-12 md:py-20 text-center bg-gradient-to-r from-blue-50 to-blue-100 px-4">
   
-  <h2 class="text-4xl md:text-5xl font-bold text-blue-800 mb-6 leading-snug">
+  <h2 class="text-3xl md:text-5xl font-bold text-blue-800 mb-6 leading-snug">
     Turning Business Complexity into <br>
     <span class="text-blue-700">Structured Agile Delivery</span>
   </h2>
 
-  <p class="text-gray-600 mb-4 max-w-2xl mx-auto text-lg font-medium">
+  <p class="text-gray-600 mb-4 text-base md:text-lg font-medium">
     Associate Manager | Business Analyst | Scrum Master
   </p>
 
-  <p class="text-blue-700 font-semibold mb-6">
-    Tools: JIRA • ADO (Azure DevOps) • SQL &nbsp;&nbsp;|&nbsp;&nbsp; Domains: SCM • BFSI • Healthcare
+  <p class="text-blue-700 font-semibold mb-6 text-sm md:text-base">
+    Tools: JIRA • ADO • SQL | SCM • BFSI • Healthcare
   </p>
 
-  <p class="text-gray-500 mb-8 max-w-xl mx-auto">
+  <p class="text-gray-500 mb-8 max-w-xl mx-auto text-sm md:text-base">
     14+ years delivering Agile solutions, simplifying complexity, and driving measurable business outcomes.
   </p>
 
-  <div class="flex flex-col sm:flex-row justify-center gap-4 flex-wrap">
-    <a href="Karthik_Dave_Resume.pdf" target="_blank" class="btn w-full sm:w-auto bg-blue-700 text-white px-6 py-3 rounded-lg font-medium">View Resume</a>
-    <a href="Karthik_Dave_Resume.pdf" download class="btn w-full sm:w-auto bg-green-600 text-white px-6 py-3 rounded-lg font-medium">Download Resume</a>
+  <div class="flex flex-col sm:flex-row justify-center gap-4">
+    <a href="Karthik_Dave_Resume.pdf" target="_blank" class="btn w-full sm:w-auto bg-blue-700 text-white px-6 py-3 rounded-lg">View Resume</a>
+    <a href="Karthik_Dave_Resume.pdf" download class="btn w-full sm:w-auto bg-green-600 text-white px-6 py-3 rounded-lg">Download Resume</a>
   </div>
 
 </section>
 
 <!-- IMPACT -->
-<section id="impact" class="py-12 bg-white px-4 sm:px-6">
+<section id="impact" class="py-12 bg-white px-4">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-2xl font-bold text-blue-700 mb-8 text-center">Impact Snapshot</h2>
 
@@ -100,130 +121,40 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 py-12 flex flex-col md:flex-row items-center gap-10">
-  <img src="profile.jpg" class="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover object-center shadow-xl ring-4 ring-white">
+<section id="about" class="max-w-6xl mx-auto px-4 py-12 flex flex-col md:flex-row items-center gap-8">
+  <img src="profile.jpg" class="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover shadow-xl">
 
-  <div class="md:w-2/3">
+  <div class="md:w-2/3 text-center md:text-left">
     <h2 class="text-2xl font-bold mb-4">About Me</h2>
 
-    <p class="text-gray-600 mb-3">
-      Results-driven Business Analyst and Scrum professional with 14+ years of experience delivering high-impact solutions using Agile methodologies, JIRA and ADO-based execution, SQL-driven insights, and stakeholder collaboration across SCM, Logistics, Healthcare, and BFSI domains.
+    <p class="text-gray-600 mb-3 text-sm md:text-base">
+      Results-driven Business Analyst and Scrum professional with 14+ years of experience delivering high-impact solutions using Agile methodologies and stakeholder collaboration.
     </p>
 
-    <p><strong>Mobile:</strong> +91 9884047448</p>
-    <p><strong>Email:</strong> Karthik.dave@gmail.com</p>
-    <p><strong>LinkedIn:</strong> 
-      <a href="https://linkedin.com/in/karthik-dave-csm" target="_blank" class="text-blue-600">View Profile</a>
-    </p>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="resume" class="bg-gray-50 py-12 px-4 sm:px-6">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-2xl font-bold text-blue-700 mb-8 text-center">Professional Experience</h2>
-
-    <div class="space-y-6">
-
-      <div class="card bg-white p-6 rounded-lg">
-        <h3 class="font-bold">Associate Manager – Accenture (Sep 2025 – Present)</h3>
-        <ul class="text-sm text-gray-600 mt-2 list-disc list-inside">
-          <li>Leading Agile delivery using JIRA and ADO, ensuring sprint governance and backlog prioritization.</li>
-          <li>Driving stakeholder alignment across SCM and BFSI workflows.</li>
-          <li>Leveraging SQL insights for reporting and data-driven decision-making.</li>
-        </ul>
-      </div>
-
-      <div class="card bg-white p-6 rounded-lg">
-        <h3 class="font-bold">Business Analyst – YASH Technologies (Jul 2022 – Oct 2024)</h3>
-        <ul class="text-sm text-gray-600 mt-2 list-disc list-inside">
-          <li>Delivered SCM and logistics solutions improving operational efficiency.</li>
-          <li>Managed Agile delivery using JIRA and ADO for backlog and sprint tracking.</li>
-          <li>Performed SQL-based analysis to support business decisions.</li>
-          <li>Led UAT ensuring alignment between requirements and delivery.</li>
-        </ul>
-      </div>
-
-      <div class="card bg-white p-6 rounded-lg">
-        <h3 class="font-bold">Senior Business Analyst – Mphasis (Feb 2016 – Feb 2017)</h3>
-        <ul class="text-sm text-gray-600 mt-2 list-disc list-inside">
-          <li>Worked across BFSI and SCM processes improving efficiency.</li>
-          <li>Achieved up to 95% forecasting accuracy through data analysis.</li>
-        </ul>
-      </div>
-
-      <div class="card bg-white p-6 rounded-lg">
-        <h3 class="font-bold">Consultant – BDO Consulting LLC (2015)</h3>
-      </div>
-
-      <div class="card bg-white p-6 rounded-lg">
-        <h3 class="font-bold">Software Analyst – Ford Technology Services</h3>
-      </div>
-
-      <div class="card bg-white p-6 rounded-lg">
-        <h3 class="font-bold">Systems Analyst – R Systems International</h3>
-      </div>
-
-      <div class="card bg-white p-6 rounded-lg">
-        <h3 class="font-bold">Client Support Executive – Allsec Technologies</h3>
-      </div>
-
-    </div>
+    <p class="text-sm"><strong>Mobile:</strong> +91 9884047448</p>
+    <p class="text-sm"><strong>Email:</strong> Karthik.dave@gmail.com</p>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="bg-white py-12 px-4 sm:px-6 text-center">
+<section id="skills" class="bg-white py-12 px-4 text-center">
   <h2 class="text-2xl font-bold text-blue-700 mb-8">Core Expertise</h2>
 
-  <div class="flex flex-wrap justify-center gap-4">
-    <div class="card bg-gray-100 px-6 py-3 rounded-lg w-full sm:w-auto">Agile & Scrum</div>
-    <div class="card bg-gray-100 px-6 py-3 rounded-lg w-full sm:w-auto">Business Analysis</div>
-    <div class="card bg-gray-100 px-6 py-3 rounded-lg w-full sm:w-auto">Supply Chain Management (SCM)</div>
-    <div class="card bg-gray-100 px-6 py-3 rounded-lg w-full sm:w-auto">BFSI Domain</div>
-    <div class="card bg-gray-100 px-6 py-3 rounded-lg w-full sm:w-auto">JIRA</div>
-    <div class="card bg-gray-100 px-6 py-3 rounded-lg w-full sm:w-auto">ADO (Azure DevOps)</div>
-    <div class="card bg-gray-100 px-6 py-3 rounded-lg w-full sm:w-auto">SQL</div>
-    <div class="card bg-gray-100 px-6 py-3 rounded-lg w-full sm:w-auto">Data Analytics</div>
-    <div class="card bg-gray-100 px-6 py-3 rounded-lg w-full sm:w-auto">UAT & QA</div>
+  <div class="flex flex-wrap justify-center gap-3">
+    <div class="card bg-gray-100 px-4 py-2 rounded-lg text-sm">Agile & Scrum</div>
+    <div class="card bg-gray-100 px-4 py-2 rounded-lg text-sm">Business Analysis</div>
+    <div class="card bg-gray-100 px-4 py-2 rounded-lg text-sm">SCM</div>
+    <div class="card bg-gray-100 px-4 py-2 rounded-lg text-sm">BFSI</div>
+    <div class="card bg-gray-100 px-4 py-2 rounded-lg text-sm">JIRA</div>
+    <div class="card bg-gray-100 px-4 py-2 rounded-lg text-sm">SQL</div>
   </div>
-</section>
-
-<!-- SCWK -->
-<section id="scwk" class="bg-gray-100 py-12 px-4 sm:px-6 text-center">
-  <div class="flex justify-center mb-4">
-    <img src="SCWK_Logo.png" alt="SCWK Logo" class="h-16 md:h-20 object-contain">
-  </div>
-
-  <h2 class="text-2xl font-bold text-blue-700 mb-4">
-    SCWK – Scrum & Coffee with Karthik ☕
-  </h2>
-
-  <p class="text-gray-700 font-medium mb-3 max-w-xl mx-auto">
-    A practical Agile knowledge-sharing initiative focused on real-world Scrum, Business Analysis, and delivery excellence.
-  </p>
-
-  <div class="text-gray-600 text-sm mb-6 space-y-2">
-    <p>• Sharing bite-sized Agile insights & real project learnings</p>
-    <p>• Breaking down Scrum concepts into simple, usable ideas</p>
-    <p>• Creating structured content (SCWK Dose, AI Shots, Lites)</p>
-  </div>
-
-  <p class="text-gray-500 mb-6 max-w-xl mx-auto">
-    Helping professionals apply Agile practically — not just understand it.
-  </p>
-
-  <a href="https://linkedin.com/in/karthik-dave-csm" target="_blank"
-     class="btn w-full sm:w-auto bg-blue-700 text-white px-6 py-2 rounded-lg">
-    Explore SCWK
-  </a>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="bg-white py-12 px-4 sm:px-6 text-center">
+<section id="contact" class="bg-white py-12 px-4 text-center">
   <h2 class="text-2xl font-bold text-blue-700 mb-6">Contact</h2>
 
-  <div class="flex flex-col sm:flex-row justify-center gap-4 flex-wrap">
+  <div class="flex flex-col sm:flex-row justify-center gap-4">
     <a href="mailto:Karthik.dave@gmail.com"
        class="btn w-full sm:w-auto bg-blue-700 text-white px-6 py-2 rounded-lg">Email</a>
 
@@ -232,6 +163,16 @@
        class="btn w-full sm:w-auto bg-green-600 text-white px-6 py-2 rounded-lg">LinkedIn</a>
   </div>
 </section>
+
+<!-- SCRIPT FOR MENU -->
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
 
 </body>
 </html>
