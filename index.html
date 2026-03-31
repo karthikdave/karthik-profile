@@ -2,18 +2,35 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ✅ CRITICAL FIX -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <title>Karthik Dave</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
+/* 🔥 HARD FIX FOR OVERFLOW */
+* {
+box-sizing: border-box;
+}
+
 html, body {
-margin:0;
-padding:0;
-overflow-x:hidden;
-font-family: system-ui, -apple-system, sans-serif;
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+width: 100%;
+}
+
+/* Prevent ANY element from breaking layout */
+div, section, header, nav {
+max-width: 100%;
+}
+
+img {
+max-width: 100%;
+height: auto;
 }
 </style>
 </head>
@@ -21,33 +38,33 @@ font-family: system-ui, -apple-system, sans-serif;
 <body class="bg-gray-50">
 
 <!-- HEADER -->
-<header class="bg-white shadow-sm px-4 py-3 flex justify-between items-center sticky top-0 z-50">
+<header class="bg-white shadow-sm px-4 py-3 flex justify-between items-center sticky top-0 z-50 w-full">
 
-<h1 class="text-lg font-semibold text-blue-700">Karthik Dave</h1>
+<h1 class="text-lg font-semibold text-blue-700 truncate">Karthik Dave</h1>
 
 <button id="menu-btn" class="text-2xl sm:hidden">☰</button>
 
 <nav class="hidden sm:flex gap-6 text-sm font-medium">
-<a href="#" class="hover:text-blue-600">About</a>
-<a href="#" class="hover:text-blue-600">Impact</a>
-<a href="#" class="hover:text-blue-600">Experience</a>
+<a href="#">About</a>
+<a href="#">Impact</a>
+<a href="#">Experience</a>
 </nav>
 
 </header>
 
 <!-- MOBILE MENU -->
-<div id="menu" class="hidden bg-white shadow-md px-4 py-3 space-y-3 text-sm">
+<div id="menu" class="hidden bg-white shadow-md px-4 py-3 space-y-3 text-sm w-full">
 <a href="#" class="block">About</a>
 <a href="#" class="block">Impact</a>
 <a href="#" class="block">Experience</a>
 </div>
 
 <!-- HERO -->
-<section class="px-4 py-8">
+<section class="px-4 py-8 w-full">
 
-<div class="bg-white rounded-xl shadow-md p-6 text-center">
+<div class="bg-white rounded-xl shadow-md p-6 text-center w-full">
 
-<h2 class="text-2xl font-bold mb-2">
+<h2 class="text-2xl font-bold mb-2 break-words">
 Agile Delivery Simplified
 </h2>
 
@@ -55,13 +72,13 @@ Agile Delivery Simplified
 Business Analyst • Scrum Master
 </p>
 
-<div class="flex flex-col gap-3">
+<div class="flex flex-col gap-3 w-full">
 
-<button class="bg-blue-600 text-white py-3 rounded-lg font-medium shadow hover:shadow-lg transition">
+<button class="bg-blue-600 text-white py-3 rounded-lg font-medium shadow w-full">
 View Resume
 </button>
 
-<button class="bg-green-600 text-white py-3 rounded-lg font-medium shadow hover:shadow-lg transition">
+<button class="bg-green-600 text-white py-3 rounded-lg font-medium shadow w-full">
 Download
 </button>
 
