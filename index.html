@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-<!-- ✅ VIEWPORT FIX -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Janani Balasubramanian | HR Manager</title>
+<title>Janani Balasubramanian</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -16,180 +14,150 @@
 html,body{
 margin:0;
 padding:0;
-overflow-x:hidden;
 font-family:'Open Sans',sans-serif;
-background:linear-gradient(to bottom,#f5f7fa,#eef6d5);
-color:#222;
+background:#f5f7fa;
+overflow-x:hidden;
 }
 
-/* NAV FIX */
+/* NAV */
 nav{
 position:sticky;
 top:0;
 background:#fff;
 z-index:1000;
 border-bottom:1px solid #eee;
-overflow-x:auto;
-white-space:nowrap;
-scroll-behavior:smooth;
+padding:10px;
 }
 
-.nav-inner{
-display:flex;
-gap:25px;
-padding:15px 20px;
-min-width:max-content;
+.nav-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
 }
 
 nav a{
-text-decoration:none;
+display:block;
+text-align:center;
+padding:8px;
 font-weight:600;
 color:#333;
-flex-shrink:0;
+text-decoration:none;
+border-radius:6px;
 }
 
 nav a.active{
-color:#94c11f;
-border-bottom:2px solid #94c11f;
+background:#94c11f;
+color:#fff;
 }
 
 /* HEADER */
 header{
-display:flex;
-gap:25px;
-padding:30px 20px 10px;
-align-items:center;
-max-width:1100px;
-margin:auto;
+padding:20px;
+text-align:center;
 }
 
 .photo-frame{
-width:140px;
-height:140px;
-border-radius:16px;
+width:120px;
+height:120px;
+margin:auto;
+border-radius:12px;
 overflow:hidden;
-border:4px solid #94c11f;
-flex-shrink:0;
+border:3px solid #94c11f;
 }
 
 .photo-frame img{
 width:100%;
 height:100%;
 object-fit:cover;
-object-position:50% 20%;
 }
 
 h1{
-margin:0;
+margin:10px 0 5px;
 font-family:'Montserrat';
-font-size:28px;
+font-size:24px;
 }
 
 .signature{
-font-size:16px;
-font-weight:700;
-margin-top:8px;
-}
-
-.subhook{
-margin-top:6px;
-color:#666;
 font-size:14px;
-}
-
-.impact-box{
-margin-top:14px;
-padding:12px;
-border-left:4px solid #94c11f;
-background:#fff;
-box-shadow:0 6px 14px rgba(0,0,0,0.06);
-}
-.impact-box p{
-margin:5px 0;
 font-weight:600;
-font-size:14px;
+color:#555;
 }
 
 /* CTA */
 .cta{
-max-width:1100px;
-margin:auto;
-padding:10px 20px 20px;
+padding:10px 20px;
+text-align:center;
 }
 
 .cta a{
-padding:12px 18px;
+display:block;
+margin:10px 0;
+padding:12px;
 background:#94c11f;
 color:#fff;
 border-radius:8px;
 text-decoration:none;
-margin-right:10px;
-display:inline-block;
-box-shadow:0 6px 12px rgba(0,0,0,0.15);
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* SECTIONS */
 section{
-scroll-margin-top:90px;
+margin:15px;
+padding:20px;
 background:#fff;
-margin:20px;
-padding:25px 20px;
-border-radius:14px;
-
-opacity:0;
-transform:translateY(30px);
-transition:all 0.6s ease;
-
-box-shadow:0 8px 20px rgba(0,0,0,0.06);
-}
-
-section.visible{
-opacity:1;
-transform:translateY(0);
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.05);
 }
 
 h2{
+font-size:18px;
 border-left:4px solid #94c11f;
-padding-left:10px;
-font-size:20px;
+padding-left:8px;
 }
 
 /* TIMELINE */
 .timeline{
-margin-left:10px;
-padding-left:15px;
-border-left:3px solid #94c11f;
+border-left:2px solid #94c11f;
+padding-left:10px;
 }
 
 .exp-block{
-margin-bottom:20px;
-padding:12px;
-background:#fff;
-border-radius:10px;
-box-shadow:0 6px 14px rgba(0,0,0,0.05);
+margin-bottom:15px;
 }
 
 .exp-year{
 font-size:12px;
 color:#777;
-font-weight:700;
 }
 
 .exp-role{
-font-weight:700;
-margin:5px 0;
+font-weight:600;
 }
 
 /* DESKTOP */
-@media(min-width:700px){
-header{
-padding:50px 40px 20px;
-align-items:flex-start;
+@media(min-width:768px){
+
+.nav-grid{
+display:flex;
+justify-content:center;
 }
-section{
-margin:30px auto;
-padding:40px 45px;
+
+header{
+display:flex;
+gap:30px;
+text-align:left;
 max-width:1100px;
+margin:auto;
+}
+
+.photo-frame{
+margin:0;
+}
+
+section{
+max-width:1100px;
+margin:25px auto;
+padding:30px;
 }
 }
 </style>
@@ -199,7 +167,7 @@ max-width:1100px;
 
 <!-- NAV -->
 <nav>
-<div class="nav-inner">
+<div class="nav-grid">
 <a href="#summary">Summary</a>
 <a href="#impact">Impact</a>
 <a href="#experience">Experience</a>
@@ -210,29 +178,14 @@ max-width:1100px;
 
 <!-- HEADER -->
 <header>
-
 <div class="photo-frame">
-<img src="janani_profile.jpg" alt="Janani">
+<img src="janani_profile.jpg">
 </div>
 
 <div>
 <h1>Janani Balasubramanian</h1>
-
-<div class="signature">
-HRBP Leader driving hiring strategy, workforce scale & business alignment
+<div class="signature">HRBP Leader | Workforce Strategy</div>
 </div>
-
-<div class="subhook">
-15+ Years • Ola Electric • Ex-Salcomp • Ex-Nokia
-</div>
-
-<div class="impact-box">
-<p>✔ Hiring Strategy & Workforce Scaling</p>
-<p>✔ HRBP Leadership Alignment</p>
-<p>✔ Engagement & Retention</p>
-</div>
-</div>
-
 </header>
 
 <!-- CTA -->
@@ -244,92 +197,43 @@ HRBP Leader driving hiring strategy, workforce scale & business alignment
 <!-- SECTIONS -->
 <section id="summary">
 <h2>Summary</h2>
-<p>
-HR professional with 15+ years of experience partnering with business leaders to drive workforce strategy, hiring, and engagement.
-</p>
+<p>15+ years HR experience in hiring, workforce planning and HRBP.</p>
 </section>
 
 <section id="impact">
 <h2>Impact</h2>
-<p>Business HR Partnering • Hiring Strategy • Engagement • HR Operations</p>
+<p>HRBP • Hiring • Engagement • Operations</p>
 </section>
 
 <section id="experience">
 <h2>Experience</h2>
 
 <div class="timeline">
-
 <div class="exp-block">
-<div class="exp-year">Jan 2026 – Present</div>
-<div class="exp-role">Manager HR (HRBP) – Ola Electric</div>
-</div>
-
-<div class="exp-block">
-<div class="exp-year">Mar 2020 – Dec 2025</div>
-<div class="exp-role">Deputy Manager – Salcomp</div>
+<div class="exp-year">2026 - Present</div>
+<div class="exp-role">Ola Electric</div>
 </div>
 
 <div class="exp-block">
-<div class="exp-year">Aug 2012 – Feb 2020</div>
-<div class="exp-role">HR Senior Executive – Nokia</div>
+<div class="exp-year">2020 - 2025</div>
+<div class="exp-role">Salcomp</div>
+</div>
 </div>
 
-</div>
 </section>
 
 <section id="skills">
 <h2>Skills</h2>
-<p>
-HRBP • Talent Acquisition • Workforce Planning • Employee Engagement • HR Operations
-</p>
+<p>HRBP • Hiring • Workforce Planning</p>
 </section>
 
 <section id="education">
 <h2>Education</h2>
-<p><b>PGDHRM</b> – Alagappa University</p>
-<p><b>MSW</b> – Cauvery College</p>
+<p>PGDHRM • MSW</p>
 </section>
 
 <script>
-const sections=document.querySelectorAll("section");
-const navLinks=document.querySelectorAll("nav a");
-
-function reveal(){
-sections.forEach(sec=>{
-const rect=sec.getBoundingClientRect();
-if(rect.top<window.innerHeight-50){
-sec.classList.add("visible");
-}
-});
-}
-
-function activeNav(){
-let current="";
-sections.forEach(sec=>{
-const rect=sec.getBoundingClientRect();
-if(rect.top<=120 && rect.bottom>=120){
-current=sec.id;
-}
-});
-
-navLinks.forEach(link=>{
-link.classList.remove("active");
-if(link.getAttribute("href")==="#"+current){
-link.classList.add("active");
-}
-});
-}
-
-window.addEventListener("scroll",()=>{
-reveal();
-activeNav();
-});
-
-window.addEventListener("load",()=>{
-window.scrollTo(0,0); /* 🔥 refresh fix */
-reveal();
-activeNav();
-});
+window.scrollTo(0,0);
 </script>
 
 </body>
