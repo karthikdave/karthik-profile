@@ -8,8 +8,6 @@
 
 <title>Janani Balasubramanian</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
 <style>
 *{
 box-sizing:border-box;
@@ -20,13 +18,8 @@ padding:0;
 html,body{
 width:100%;
 overflow-x:hidden;
-font-family:'Open Sans',sans-serif;
+font-family:Arial, sans-serif;
 background:#f5f7fa;
-}
-
-/* GLOBAL SAFE GUARD */
-img,div,section,header,nav{
-max-width:100%;
 }
 
 /* NAV */
@@ -34,30 +27,24 @@ nav{
 position:sticky;
 top:0;
 background:#fff;
-border-bottom:1px solid #eee;
-z-index:1000;
+border-bottom:1px solid #ddd;
+padding:8px;
 }
 
 .nav-inner{
 display:flex;
-flex-wrap:wrap; /* ✅ FIX */
+flex-wrap:wrap; /* 🔥 ROOT FIX */
 justify-content:center;
-gap:10px;
-padding:10px;
+gap:8px;
 }
 
 nav a{
 text-decoration:none;
-font-size:14px;
-font-weight:600;
 color:#333;
-padding:6px 10px;
+font-size:13px;
+padding:6px 8px;
 border-radius:6px;
-}
-
-nav a.active{
-background:#94c11f;
-color:#fff;
+background:#f0f0f0;
 }
 
 /* HEADER */
@@ -66,31 +53,22 @@ text-align:center;
 padding:20px;
 }
 
-.photo-frame{
-width:120px;
-height:120px;
-margin:auto;
+header img{
+width:110px;
+height:110px;
 border-radius:12px;
-overflow:hidden;
+object-fit:cover;
 border:3px solid #94c11f;
 }
 
-.photo-frame img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
 h1{
-font-family:'Montserrat';
-font-size:24px;
+font-size:22px;
 margin-top:10px;
 }
 
-.signature{
-font-size:14px;
-margin-top:5px;
+p{
 color:#555;
+font-size:14px;
 }
 
 /* CTA */
@@ -101,66 +79,39 @@ text-align:center;
 
 .cta a{
 display:block;
-margin:8px 0;
-padding:12px;
+margin:8px auto;
+padding:10px;
 background:#94c11f;
 color:#fff;
 text-decoration:none;
-border-radius:8px;
+border-radius:6px;
+width:90%;
+max-width:250px;
 }
 
 /* SECTIONS */
 section{
-margin:15px;
-padding:20px;
+margin:12px;
+padding:15px;
 background:#fff;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.05);
-}
-
-/* TIMELINE */
-.timeline{
-border-left:2px solid #94c11f;
-padding-left:10px;
-}
-
-.exp-block{
-margin-bottom:12px;
-}
-
-.exp-year{
-font-size:12px;
-color:#777;
-}
-
-.exp-role{
-font-weight:600;
+border-radius:8px;
 }
 
 /* DESKTOP */
 @media(min-width:768px){
 
-header{
-display:flex;
-gap:25px;
-align-items:center;
-max-width:1100px;
-margin:auto;
-text-align:left;
+.nav-inner{
+flex-wrap:nowrap;
 }
 
-.photo-frame{
-margin:0;
+header{
+max-width:1000px;
+margin:auto;
 }
 
 section{
-max-width:1100px;
-margin:25px auto;
-}
-
-.nav-inner{
-flex-wrap:nowrap;
-justify-content:center;
+max-width:1000px;
+margin:20px auto;
 }
 }
 </style>
@@ -181,16 +132,9 @@ justify-content:center;
 
 <!-- HEADER -->
 <header>
-
-<div class="photo-frame">
 <img src="janani_profile.jpg" alt="Janani">
-</div>
-
-<div>
 <h1>Janani Balasubramanian</h1>
-<div class="signature">HRBP Leader | Workforce Strategy</div>
-</div>
-
+<p>HRBP Leader | Workforce Strategy</p>
 </header>
 
 <!-- CTA -->
@@ -199,53 +143,31 @@ justify-content:center;
 <a href="mailto:beingjanani@gmail.com">Request Resume</a>
 </div>
 
-<!-- SECTIONS -->
+<!-- CONTENT -->
 <section id="summary">
-<h2>Summary</h2>
-<p>15+ years HR experience in hiring, workforce planning and HRBP.</p>
+<h3>Summary</h3>
+<p>15+ years HR experience in hiring and HRBP.</p>
 </section>
 
 <section id="impact">
-<h2>Impact</h2>
-<p>HRBP • Hiring • Engagement • Operations</p>
+<h3>Impact</h3>
+<p>HRBP • Hiring • Engagement</p>
 </section>
 
 <section id="experience">
-<h2>Experience</h2>
-
-<div class="timeline">
-<div class="exp-block">
-<div class="exp-year">2026 - Present</div>
-<div class="exp-role">Ola Electric</div>
-</div>
-
-<div class="exp-block">
-<div class="exp-year">2020 - 2025</div>
-<div class="exp-role">Salcomp</div>
-</div>
-
-<div class="exp-block">
-<div class="exp-year">2012 - 2020</div>
-<div class="exp-role">Nokia</div>
-</div>
-</div>
-
+<h3>Experience</h3>
+<p>Ola Electric • Salcomp • Nokia</p>
 </section>
 
 <section id="skills">
-<h2>Skills</h2>
-<p>HRBP • Talent Acquisition • Workforce Planning</p>
+<h3>Skills</h3>
+<p>HRBP • Talent Acquisition</p>
 </section>
 
 <section id="education">
-<h2>Education</h2>
-<p>PGDHRM – Alagappa University</p>
-<p>MSW – Cauvery College</p>
+<h3>Education</h3>
+<p>PGDHRM • MSW</p>
 </section>
-
-<script>
-window.onload = () => window.scrollTo(0,0);
-</script>
 
 </body>
 </html>
