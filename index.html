@@ -3,96 +3,333 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- ✅ CRITICAL FIX -->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- ✅ VIEWPORT FIX -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Karthik Dave</title>
+<title>Janani Balasubramanian | HR Manager</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* 🔥 HARD FIX FOR OVERFLOW */
-* {
-box-sizing: border-box;
+*{box-sizing:border-box;}
+
+html,body{
+margin:0;
+padding:0;
+overflow-x:hidden;
+font-family:'Open Sans',sans-serif;
+background:linear-gradient(to bottom,#f5f7fa,#eef6d5);
+color:#222;
 }
 
-html, body {
-margin: 0;
-padding: 0;
-overflow-x: hidden;
-width: 100%;
+/* NAV FIX */
+nav{
+position:sticky;
+top:0;
+background:#fff;
+z-index:1000;
+border-bottom:1px solid #eee;
+overflow-x:auto;
+white-space:nowrap;
+scroll-behavior:smooth;
 }
 
-/* Prevent ANY element from breaking layout */
-div, section, header, nav {
-max-width: 100%;
+.nav-inner{
+display:flex;
+gap:25px;
+padding:15px 20px;
+min-width:max-content;
 }
 
-img {
-max-width: 100%;
-height: auto;
+nav a{
+text-decoration:none;
+font-weight:600;
+color:#333;
+flex-shrink:0;
+}
+
+nav a.active{
+color:#94c11f;
+border-bottom:2px solid #94c11f;
+}
+
+/* HEADER */
+header{
+display:flex;
+gap:25px;
+padding:30px 20px 10px;
+align-items:center;
+max-width:1100px;
+margin:auto;
+}
+
+.photo-frame{
+width:140px;
+height:140px;
+border-radius:16px;
+overflow:hidden;
+border:4px solid #94c11f;
+flex-shrink:0;
+}
+
+.photo-frame img{
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:50% 20%;
+}
+
+h1{
+margin:0;
+font-family:'Montserrat';
+font-size:28px;
+}
+
+.signature{
+font-size:16px;
+font-weight:700;
+margin-top:8px;
+}
+
+.subhook{
+margin-top:6px;
+color:#666;
+font-size:14px;
+}
+
+.impact-box{
+margin-top:14px;
+padding:12px;
+border-left:4px solid #94c11f;
+background:#fff;
+box-shadow:0 6px 14px rgba(0,0,0,0.06);
+}
+.impact-box p{
+margin:5px 0;
+font-weight:600;
+font-size:14px;
+}
+
+/* CTA */
+.cta{
+max-width:1100px;
+margin:auto;
+padding:10px 20px 20px;
+}
+
+.cta a{
+padding:12px 18px;
+background:#94c11f;
+color:#fff;
+border-radius:8px;
+text-decoration:none;
+margin-right:10px;
+display:inline-block;
+box-shadow:0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* SECTIONS */
+section{
+scroll-margin-top:90px;
+background:#fff;
+margin:20px;
+padding:25px 20px;
+border-radius:14px;
+
+opacity:0;
+transform:translateY(30px);
+transition:all 0.6s ease;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.06);
+}
+
+section.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+h2{
+border-left:4px solid #94c11f;
+padding-left:10px;
+font-size:20px;
+}
+
+/* TIMELINE */
+.timeline{
+margin-left:10px;
+padding-left:15px;
+border-left:3px solid #94c11f;
+}
+
+.exp-block{
+margin-bottom:20px;
+padding:12px;
+background:#fff;
+border-radius:10px;
+box-shadow:0 6px 14px rgba(0,0,0,0.05);
+}
+
+.exp-year{
+font-size:12px;
+color:#777;
+font-weight:700;
+}
+
+.exp-role{
+font-weight:700;
+margin:5px 0;
+}
+
+/* DESKTOP */
+@media(min-width:700px){
+header{
+padding:50px 40px 20px;
+align-items:flex-start;
+}
+section{
+margin:30px auto;
+padding:40px 45px;
+max-width:1100px;
+}
 }
 </style>
 </head>
 
-<body class="bg-gray-50">
+<body>
+
+<!-- NAV -->
+<nav>
+<div class="nav-inner">
+<a href="#summary">Summary</a>
+<a href="#impact">Impact</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#education">Education</a>
+</div>
+</nav>
 
 <!-- HEADER -->
-<header class="bg-white shadow-sm px-4 py-3 flex justify-between items-center sticky top-0 z-50 w-full">
+<header>
 
-<h1 class="text-lg font-semibold text-blue-700 truncate">Karthik Dave</h1>
+<div class="photo-frame">
+<img src="janani_profile.jpg" alt="Janani">
+</div>
 
-<button id="menu-btn" class="text-2xl sm:hidden">☰</button>
+<div>
+<h1>Janani Balasubramanian</h1>
 
-<nav class="hidden sm:flex gap-6 text-sm font-medium">
-<a href="#">About</a>
-<a href="#">Impact</a>
-<a href="#">Experience</a>
-</nav>
+<div class="signature">
+HRBP Leader driving hiring strategy, workforce scale & business alignment
+</div>
+
+<div class="subhook">
+15+ Years • Ola Electric • Ex-Salcomp • Ex-Nokia
+</div>
+
+<div class="impact-box">
+<p>✔ Hiring Strategy & Workforce Scaling</p>
+<p>✔ HRBP Leadership Alignment</p>
+<p>✔ Engagement & Retention</p>
+</div>
+</div>
 
 </header>
 
-<!-- MOBILE MENU -->
-<div id="menu" class="hidden bg-white shadow-md px-4 py-3 space-y-3 text-sm w-full">
-<a href="#" class="block">About</a>
-<a href="#" class="block">Impact</a>
-<a href="#" class="block">Experience</a>
+<!-- CTA -->
+<div class="cta">
+<a href="mailto:beingjanani@gmail.com">Contact</a>
+<a href="mailto:beingjanani@gmail.com">Request Resume</a>
 </div>
 
-<!-- HERO -->
-<section class="px-4 py-8 w-full">
-
-<div class="bg-white rounded-xl shadow-md p-6 text-center w-full">
-
-<h2 class="text-2xl font-bold mb-2 break-words">
-Agile Delivery Simplified
-</h2>
-
-<p class="text-sm text-gray-600 mb-6">
-Business Analyst • Scrum Master
+<!-- SECTIONS -->
+<section id="summary">
+<h2>Summary</h2>
+<p>
+HR professional with 15+ years of experience partnering with business leaders to drive workforce strategy, hiring, and engagement.
 </p>
-
-<div class="flex flex-col gap-3 w-full">
-
-<button class="bg-blue-600 text-white py-3 rounded-lg font-medium shadow w-full">
-View Resume
-</button>
-
-<button class="bg-green-600 text-white py-3 rounded-lg font-medium shadow w-full">
-Download
-</button>
-
-</div>
-
-</div>
-
 </section>
 
-<!-- SCRIPT -->
+<section id="impact">
+<h2>Impact</h2>
+<p>Business HR Partnering • Hiring Strategy • Engagement • HR Operations</p>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+
+<div class="timeline">
+
+<div class="exp-block">
+<div class="exp-year">Jan 2026 – Present</div>
+<div class="exp-role">Manager HR (HRBP) – Ola Electric</div>
+</div>
+
+<div class="exp-block">
+<div class="exp-year">Mar 2020 – Dec 2025</div>
+<div class="exp-role">Deputy Manager – Salcomp</div>
+</div>
+
+<div class="exp-block">
+<div class="exp-year">Aug 2012 – Feb 2020</div>
+<div class="exp-role">HR Senior Executive – Nokia</div>
+</div>
+
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<p>
+HRBP • Talent Acquisition • Workforce Planning • Employee Engagement • HR Operations
+</p>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<p><b>PGDHRM</b> – Alagappa University</p>
+<p><b>MSW</b> – Cauvery College</p>
+</section>
+
 <script>
-document.getElementById("menu-btn").onclick = () => {
-document.getElementById("menu").classList.toggle("hidden");
-};
+const sections=document.querySelectorAll("section");
+const navLinks=document.querySelectorAll("nav a");
+
+function reveal(){
+sections.forEach(sec=>{
+const rect=sec.getBoundingClientRect();
+if(rect.top<window.innerHeight-50){
+sec.classList.add("visible");
+}
+});
+}
+
+function activeNav(){
+let current="";
+sections.forEach(sec=>{
+const rect=sec.getBoundingClientRect();
+if(rect.top<=120 && rect.bottom>=120){
+current=sec.id;
+}
+});
+
+navLinks.forEach(link=>{
+link.classList.remove("active");
+if(link.getAttribute("href")==="#"+current){
+link.classList.add("active");
+}
+});
+}
+
+window.addEventListener("scroll",()=>{
+reveal();
+activeNav();
+});
+
+window.addEventListener("load",()=>{
+window.scrollTo(0,0); /* 🔥 refresh fix */
+reveal();
+activeNav();
+});
 </script>
 
 </body>
