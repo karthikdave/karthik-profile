@@ -6,13 +6,16 @@
 
 <title>Janani Balasubramanian</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 
 body{
-font-family:Arial, sans-serif;
+font-family:'Open Sans',sans-serif;
 background:#f5f7fa;
 overflow-x:hidden;
+color:#222;
 }
 
 /* HEADER */
@@ -20,20 +23,22 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px;
+padding:15px 20px;
 background:#fff;
-border-bottom:1px solid #ddd;
+border-bottom:1px solid #eee;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-h1{
-font-size:18px;
+.logo{
+font-weight:700;
+font-family:'Montserrat';
 }
 
-/* HAMBURGER */
 .menu-btn{
 font-size:22px;
 cursor:pointer;
-display:block;
 }
 
 /* NAV */
@@ -41,62 +46,119 @@ nav{
 display:none;
 flex-direction:column;
 background:#fff;
-border-bottom:1px solid #ddd;
 }
 
 nav a{
-padding:12px;
+padding:12px 20px;
 text-decoration:none;
 color:#333;
 border-top:1px solid #eee;
 }
 
-/* SHOW MENU */
 nav.active{
 display:flex;
 }
 
 /* HERO */
 .hero{
+background:linear-gradient(to right,#ffffff,#eef6d5);
+margin:20px;
+padding:30px 20px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 text-align:center;
-padding:20px;
 }
 
 .hero img{
-width:110px;
-height:110px;
-border-radius:12px;
+width:120px;
+height:120px;
+border-radius:16px;
 object-fit:cover;
-border:3px solid #94c11f;
+border:4px solid #94c11f;
+margin-bottom:15px;
 }
 
-.hero h2{
-margin-top:10px;
+.hero h1{
+font-family:'Montserrat';
+font-size:24px;
 }
 
+.hero p{
+color:#555;
+margin-top:6px;
+font-size:14px;
+}
+
+/* IMPACT BOX */
+.impact{
+margin-top:15px;
+text-align:left;
+background:#fff;
+padding:12px;
+border-radius:10px;
+box-shadow:0 6px 14px rgba(0,0,0,0.06);
+}
+
+.impact p{
+font-size:14px;
+margin:6px 0;
+}
+
+/* CTA */
 .cta{
-padding:15px;
+padding:10px 20px;
 text-align:center;
 }
 
 .cta a{
-display:block;
-margin:8px auto;
-padding:10px;
+display:inline-block;
+margin:8px;
+padding:12px 18px;
 background:#94c11f;
 color:#fff;
 text-decoration:none;
-border-radius:6px;
-width:90%;
-max-width:250px;
+border-radius:8px;
+box-shadow:0 6px 14px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.cta a:hover{
+transform:translateY(-2px);
 }
 
 /* SECTIONS */
 section{
-margin:12px;
-padding:15px;
 background:#fff;
-border-radius:8px;
+margin:20px;
+padding:20px;
+border-radius:14px;
+box-shadow:0 8px 20px rgba(0,0,0,0.06);
+}
+
+h2{
+font-size:18px;
+margin-bottom:10px;
+border-left:4px solid #94c11f;
+padding-left:8px;
+}
+
+/* TIMELINE */
+.timeline{
+border-left:3px solid #94c11f;
+padding-left:12px;
+}
+
+.exp{
+margin-bottom:15px;
+}
+
+.exp span{
+font-size:12px;
+color:#777;
+}
+
+.exp p{
+font-weight:600;
 }
 
 /* DESKTOP */
@@ -114,7 +176,29 @@ justify-content:center;
 
 nav a{
 border:none;
-padding:10px 15px;
+padding:12px 15px;
+}
+
+.hero{
+max-width:1100px;
+margin:30px auto;
+text-align:left;
+display:flex;
+gap:25px;
+align-items:center;
+}
+
+.hero img{
+margin:0;
+}
+
+.hero-content{
+flex:1;
+}
+
+section{
+max-width:1100px;
+margin:25px auto;
 }
 
 }
@@ -124,7 +208,7 @@ padding:10px 15px;
 <body>
 
 <header>
-<h1>Janani HR</h1>
+<div class="logo">Janani HR</div>
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
 </header>
 
@@ -136,22 +220,77 @@ padding:10px 15px;
 <a href="#education">Education</a>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
+
 <img src="janani_profile.jpg">
-<h2>Janani Balasubramanian</h2>
-<p>HRBP Leader | Workforce Strategy</p>
+
+<div class="hero-content">
+<h1>Janani Balasubramanian</h1>
+<p>HR Business Partner Leader</p>
+
+<p>Driving hiring strategy, workforce scale & business alignment across high-growth manufacturing environments</p>
+
+<div class="impact">
+<p>✔ Scaled workforce during rapid expansion phases</p>
+<p>✔ Partnered with leadership for business-critical hiring</p>
+<p>✔ Strengthened engagement & retention</p>
 </div>
 
+</div>
+</div>
+
+<!-- CTA -->
 <div class="cta">
 <a href="mailto:beingjanani@gmail.com">Contact</a>
 <a href="mailto:beingjanani@gmail.com">Request Resume</a>
 </div>
 
-<section id="summary"><h3>Summary</h3><p>15+ years HR experience.</p></section>
-<section id="impact"><h3>Impact</h3><p>HRBP • Hiring • Engagement</p></section>
-<section id="experience"><h3>Experience</h3><p>Ola • Salcomp • Nokia</p></section>
-<section id="skills"><h3>Skills</h3><p>HRBP • Talent Acquisition</p></section>
-<section id="education"><h3>Education</h3><p>PGDHRM • MSW</p></section>
+<!-- SECTIONS -->
+<section id="summary">
+<h2>Summary</h2>
+<p>15+ years HR experience in HRBP, hiring strategy, and workforce planning.</p>
+</section>
+
+<section id="impact">
+<h2>Impact</h2>
+<p>HRBP • Hiring • Engagement • Workforce Strategy</p>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+
+<div class="timeline">
+
+<div class="exp">
+<span>2026 - Present</span>
+<p>Manager – HRBP | Ola Electric</p>
+</div>
+
+<div class="exp">
+<span>2020 - 2025</span>
+<p>Deputy Manager | Salcomp</p>
+</div>
+
+<div class="exp">
+<span>2012 - 2020</span>
+<p>HR Senior Executive | Nokia</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<p>HRBP • Talent Acquisition • Workforce Planning • Engagement</p>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<p>PGDHRM – Alagappa University</p>
+<p>MSW – Cauvery College</p>
+</section>
 
 <script>
 function toggleMenu(){
