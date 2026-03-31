@@ -2,58 +2,67 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-<!-- ✅ CRITICAL -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Janani Balasubramanian</title>
 
 <style>
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0;}
 
-html,body{
-width:100%;
-overflow-x:hidden;
+body{
 font-family:Arial, sans-serif;
 background:#f5f7fa;
-}
-
-/* NAV */
-nav{
-position:sticky;
-top:0;
-background:#fff;
-border-bottom:1px solid #ddd;
-padding:8px;
-}
-
-.nav-inner{
-display:flex;
-flex-wrap:wrap; /* 🔥 ROOT FIX */
-justify-content:center;
-gap:8px;
-}
-
-nav a{
-text-decoration:none;
-color:#333;
-font-size:13px;
-padding:6px 8px;
-border-radius:6px;
-background:#f0f0f0;
+overflow-x:hidden;
 }
 
 /* HEADER */
 header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+background:#fff;
+border-bottom:1px solid #ddd;
+}
+
+h1{
+font-size:18px;
+}
+
+/* HAMBURGER */
+.menu-btn{
+font-size:22px;
+cursor:pointer;
+display:block;
+}
+
+/* NAV */
+nav{
+display:none;
+flex-direction:column;
+background:#fff;
+border-bottom:1px solid #ddd;
+}
+
+nav a{
+padding:12px;
+text-decoration:none;
+color:#333;
+border-top:1px solid #eee;
+}
+
+/* SHOW MENU */
+nav.active{
+display:flex;
+}
+
+/* HERO */
+.hero{
 text-align:center;
 padding:20px;
 }
 
-header img{
+.hero img{
 width:110px;
 height:110px;
 border-radius:12px;
@@ -61,17 +70,10 @@ object-fit:cover;
 border:3px solid #94c11f;
 }
 
-h1{
-font-size:22px;
+.hero h2{
 margin-top:10px;
 }
 
-p{
-color:#555;
-font-size:14px;
-}
-
-/* CTA */
 .cta{
 padding:15px;
 text-align:center;
@@ -100,74 +102,62 @@ border-radius:8px;
 /* DESKTOP */
 @media(min-width:768px){
 
-.nav-inner{
-flex-wrap:nowrap;
+.menu-btn{
+display:none;
 }
 
-header{
-max-width:1000px;
-margin:auto;
+nav{
+display:flex !important;
+flex-direction:row;
+justify-content:center;
 }
 
-section{
-max-width:1000px;
-margin:20px auto;
+nav a{
+border:none;
+padding:10px 15px;
 }
+
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
-<div class="nav-inner">
+<header>
+<h1>Janani HR</h1>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav id="nav">
 <a href="#summary">Summary</a>
 <a href="#impact">Impact</a>
 <a href="#experience">Experience</a>
 <a href="#skills">Skills</a>
 <a href="#education">Education</a>
-</div>
 </nav>
 
-<!-- HEADER -->
-<header>
-<img src="janani_profile.jpg" alt="Janani">
-<h1>Janani Balasubramanian</h1>
+<div class="hero">
+<img src="janani_profile.jpg">
+<h2>Janani Balasubramanian</h2>
 <p>HRBP Leader | Workforce Strategy</p>
-</header>
+</div>
 
-<!-- CTA -->
 <div class="cta">
 <a href="mailto:beingjanani@gmail.com">Contact</a>
 <a href="mailto:beingjanani@gmail.com">Request Resume</a>
 </div>
 
-<!-- CONTENT -->
-<section id="summary">
-<h3>Summary</h3>
-<p>15+ years HR experience in hiring and HRBP.</p>
-</section>
+<section id="summary"><h3>Summary</h3><p>15+ years HR experience.</p></section>
+<section id="impact"><h3>Impact</h3><p>HRBP • Hiring • Engagement</p></section>
+<section id="experience"><h3>Experience</h3><p>Ola • Salcomp • Nokia</p></section>
+<section id="skills"><h3>Skills</h3><p>HRBP • Talent Acquisition</p></section>
+<section id="education"><h3>Education</h3><p>PGDHRM • MSW</p></section>
 
-<section id="impact">
-<h3>Impact</h3>
-<p>HRBP • Hiring • Engagement</p>
-</section>
-
-<section id="experience">
-<h3>Experience</h3>
-<p>Ola Electric • Salcomp • Nokia</p>
-</section>
-
-<section id="skills">
-<h3>Skills</h3>
-<p>HRBP • Talent Acquisition</p>
-</section>
-
-<section id="education">
-<h3>Education</h3>
-<p>PGDHRM • MSW</p>
-</section>
+<script>
+function toggleMenu(){
+document.getElementById("nav").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
