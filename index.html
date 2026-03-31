@@ -2,21 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<!-- ✅ CRITICAL -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Janani Balasubramanian</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;}
-
-html,body{
+*{
+box-sizing:border-box;
 margin:0;
 padding:0;
+}
+
+html,body{
+width:100%;
+overflow-x:hidden;
 font-family:'Open Sans',sans-serif;
 background:#f5f7fa;
-overflow-x:hidden;
+}
+
+/* GLOBAL SAFE GUARD */
+img,div,section,header,nav{
+max-width:100%;
 }
 
 /* NAV */
@@ -24,24 +34,24 @@ nav{
 position:sticky;
 top:0;
 background:#fff;
-z-index:1000;
 border-bottom:1px solid #eee;
+z-index:1000;
+}
+
+.nav-inner{
+display:flex;
+flex-wrap:wrap; /* ✅ FIX */
+justify-content:center;
+gap:10px;
 padding:10px;
 }
 
-.nav-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-}
-
 nav a{
-display:block;
-text-align:center;
-padding:8px;
+text-decoration:none;
+font-size:14px;
 font-weight:600;
 color:#333;
-text-decoration:none;
+padding:6px 10px;
 border-radius:6px;
 }
 
@@ -52,8 +62,8 @@ color:#fff;
 
 /* HEADER */
 header{
-padding:20px;
 text-align:center;
+padding:20px;
 }
 
 .photo-frame{
@@ -72,32 +82,31 @@ object-fit:cover;
 }
 
 h1{
-margin:10px 0 5px;
 font-family:'Montserrat';
 font-size:24px;
+margin-top:10px;
 }
 
 .signature{
 font-size:14px;
-font-weight:600;
+margin-top:5px;
 color:#555;
 }
 
 /* CTA */
 .cta{
-padding:10px 20px;
+padding:15px;
 text-align:center;
 }
 
 .cta a{
 display:block;
-margin:10px 0;
+margin:8px 0;
 padding:12px;
 background:#94c11f;
 color:#fff;
-border-radius:8px;
 text-decoration:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+border-radius:8px;
 }
 
 /* SECTIONS */
@@ -106,13 +115,7 @@ margin:15px;
 padding:20px;
 background:#fff;
 border-radius:10px;
-box-shadow:0 4px 12px rgba(0,0,0,0.05);
-}
-
-h2{
-font-size:18px;
-border-left:4px solid #94c11f;
-padding-left:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
 }
 
 /* TIMELINE */
@@ -122,7 +125,7 @@ padding-left:10px;
 }
 
 .exp-block{
-margin-bottom:15px;
+margin-bottom:12px;
 }
 
 .exp-year{
@@ -137,17 +140,13 @@ font-weight:600;
 /* DESKTOP */
 @media(min-width:768px){
 
-.nav-grid{
-display:flex;
-justify-content:center;
-}
-
 header{
 display:flex;
-gap:30px;
-text-align:left;
+gap:25px;
+align-items:center;
 max-width:1100px;
 margin:auto;
+text-align:left;
 }
 
 .photo-frame{
@@ -157,7 +156,11 @@ margin:0;
 section{
 max-width:1100px;
 margin:25px auto;
-padding:30px;
+}
+
+.nav-inner{
+flex-wrap:nowrap;
+justify-content:center;
 }
 }
 </style>
@@ -167,7 +170,7 @@ padding:30px;
 
 <!-- NAV -->
 <nav>
-<div class="nav-grid">
+<div class="nav-inner">
 <a href="#summary">Summary</a>
 <a href="#impact">Impact</a>
 <a href="#experience">Experience</a>
@@ -178,14 +181,16 @@ padding:30px;
 
 <!-- HEADER -->
 <header>
+
 <div class="photo-frame">
-<img src="janani_profile.jpg">
+<img src="janani_profile.jpg" alt="Janani">
 </div>
 
 <div>
 <h1>Janani Balasubramanian</h1>
 <div class="signature">HRBP Leader | Workforce Strategy</div>
 </div>
+
 </header>
 
 <!-- CTA -->
@@ -218,22 +223,28 @@ padding:30px;
 <div class="exp-year">2020 - 2025</div>
 <div class="exp-role">Salcomp</div>
 </div>
+
+<div class="exp-block">
+<div class="exp-year">2012 - 2020</div>
+<div class="exp-role">Nokia</div>
+</div>
 </div>
 
 </section>
 
 <section id="skills">
 <h2>Skills</h2>
-<p>HRBP • Hiring • Workforce Planning</p>
+<p>HRBP • Talent Acquisition • Workforce Planning</p>
 </section>
 
 <section id="education">
 <h2>Education</h2>
-<p>PGDHRM • MSW</p>
+<p>PGDHRM – Alagappa University</p>
+<p>MSW – Cauvery College</p>
 </section>
 
 <script>
-window.scrollTo(0,0);
+window.onload = () => window.scrollTo(0,0);
 </script>
 
 </body>
